@@ -32,32 +32,39 @@ module.exports = {
         lastUpdated: '上次更新',
         nav: [
           {
-            text: "Fine's Blog",
+            text: "Finen's Blog",
             items: [
-              { text: 'Java', link: '/blog/Java' },
+              { text: 'Java', link: '/language/chinese' },
               { text: 'Python', link: '/language/japanese' },
-              { text: 'PHP', link: '/language/japanese' },
-              { text: 'Git', link: '/language/japanese' },
-              { text: 'Other', link: '/language/japanese' }
+              { text: 'Python', link: '/language/japaneses' }
             ]
           },
           {
-            text: "Book",
+            text: 'Book Sharing',
             items: [
-              { text: '计算机组成原理', link: '/blog/Java' },
-              { text: 'Python', link: '/language/japanese' },
-              { text: 'PHP', link: '/language/japanese' },
-              { text: 'Git', link: '/language/japanese' },
-              { text: 'Other', link: '/language/japanese' }
+              { text: 'CU', items: 
+               [
+                { text: 'Java', link: '/language/chinese' },
+                { text: 'Python', link: '/language/japanese' },
+                
+               ] 
+              },
+              { text: 'DS', items: 
+               [
+                { text: '3a', link: '/language/chinese' },
+                { text: '2', link: '/language/japsanese' },
+                { text: '1', link: '/language/japadnese' }
+               ] 
+              },
             ]
           },
           {
             text: 'Project',
-            link: '/guide/',
+            link: '/zh/config/'
           },
           {
             text: 'Resume',
-            link: '/config/'
+            link: '/about/'
           }
         ],
         sidebar: {
