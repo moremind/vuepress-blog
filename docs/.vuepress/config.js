@@ -3,8 +3,8 @@ module.exports = {
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'VuePress',
-      description: 'Vue 驱动的静态站点生成工具'
+      title: "Finen's Blog",
+      description: 'Stay Hungry! Stay Foolish!'
     }
   },
   head: [
@@ -21,7 +21,7 @@ module.exports = {
   serviceWorker: true,
   theme: 'vue',
   themeConfig: {
-    repo: 'docschina/vuepress',
+    repo: 'hirCodd',
     editLinks: true,
     docsDir: 'docs',
     locales: {
@@ -32,16 +32,32 @@ module.exports = {
         lastUpdated: '上次更新',
         nav: [
           {
-            text: '指南',
+            text: "Fine's Blog",
+            items: [
+              { text: 'Java', link: '/blog/Java' },
+              { text: 'Python', link: '/language/japanese' },
+              { text: 'PHP', link: '/language/japanese' },
+              { text: 'Git', link: '/language/japanese' },
+              { text: 'Other', link: '/language/japanese' }
+            ]
+          },
+          {
+            text: "Book",
+            items: [
+              { text: '计算机组成原理', link: '/blog/Java' },
+              { text: 'Python', link: '/language/japanese' },
+              { text: 'PHP', link: '/language/japanese' },
+              { text: 'Git', link: '/language/japanese' },
+              { text: 'Other', link: '/language/japanese' }
+            ]
+          },
+          {
+            text: 'Project',
             link: '/guide/',
           },
           {
-            text: '配置参考',
+            text: 'Resume',
             link: '/config/'
-          },
-          {
-            text: '默认主题配置',
-            link: '/default-theme-config/'
           }
         ],
         sidebar: {
