@@ -4,24 +4,23 @@
 
     <Content :custom="false"/>
 
-    <div class="page-edit">
-      <div class="edit-link" v-if="editLink"
-      >
+    <!-- <div class="page-edit">
+      <! <div class="edit-link" v-if="editLink">
           <a
           :href="rawLink" target="_blank" rel="noopener noreferrer">查看原文</a>
           |  <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
         <OutboundLink/>
-      </div>
+      </div> -->
 
-      <div
+      <!-- <div
         class="last-updated"
         v-if="lastUpdated"
       >
         <span class="prefix">{{ lastUpdatedText }}: </span>
         <span class="time">{{ lastUpdated }}</span>
-      </div>
-    </div>
-
+      </div> 
+    </div> -->
+    
     <div class="page-nav" v-if="prev || next">
       <p class="inner">
         <span
@@ -52,15 +51,33 @@
         </span>
       </p>
     </div>
-
     <slot name="bottom"/>
+    <div id="vcomments"></div>
+    
+
   </div>
+  
 </template>
 
 <script>
 import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
+window.AV = require('leancloud-storage')
+import Valine from 'valine'
 
 export default {
+
+mounted: function(){
+    var valine = new Valine();
+      valine.init({
+          el: '#vcomments',
+          appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
+          appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
+          notify:false, 
+          verify:false, 
+          avatar:'mm', 
+      })
+  },
+
   props: ['sidebarItems'],
 
   computed: {
@@ -134,7 +151,7 @@ export default {
     },
     rawLink () {
       const path = normalize(this.$page.path)
-      const rawPath = `https://vuepress.vuejs.org${path}`
+      const rawPath = `https://github.com/hirCodd/Finen${path}`
       return rawPath
     }
   },
@@ -244,4 +261,11 @@ function find (page, items, offset) {
       float none
       text-align left
 
+#vcomments {
+  width 50%
+  padding 10px
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
 </style>

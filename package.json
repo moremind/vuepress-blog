@@ -17,22 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/vuepress.git"
+    "url": "git+https://github.com/hirCodd/vuepress-blog.git"
   },
   "keywords": [
     "documentation",
     "vue",
     "generator"
   ],
-  "author": "Evan You",
+  "author": "hefengen",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vuejs/vuepress/issues"
-  },
-  "homepage": "https://github.com/vuejs/vuepress#readme",
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "lint-staged": {
     "*.{js,vue}": [
       "eslint --fix",
@@ -64,6 +57,7 @@
     "koa-mount": "^3.0.0",
     "koa-range": "^0.3.0",
     "koa-static": "^4.0.2",
+    "leancloud-storage": "^3.10.0",
     "loader-utils": "^1.1.0",
     "lodash.throttle": "^4.1.1",
     "lru-cache": "^4.1.2",
@@ -84,6 +78,7 @@
     "stylus-loader": "^3.0.2",
     "toml": "^2.3.3",
     "url-loader": "^1.0.1",
+    "valine": "^1.3.0",
     "vue": "^2.5.16",
     "vue-loader": "^15.2.4",
     "vue-router": "^3.0.1",

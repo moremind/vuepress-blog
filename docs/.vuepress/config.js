@@ -34,33 +34,35 @@ module.exports = {
           {
             text: "Finen's Blog",
             items: [
-              { text: 'Java', link: '/language/chinese' },
-              { text: 'Python', link: '/language/japanese' },
-              { text: 'Python', link: '/language/japaneses' }
+              { text: 'Java', link: '/blog/Java/' },
+              { text: 'Python', link: '/blog/Python/' },
+              { text: 'PHP', link: '/blog/PHP/' },
+              { text: 'Git', link: '/blog/git/' },
+              { text: '数据结构', link: '/blog/ds/' },
+              { text: '其他内容', link: '/blog/other/' },
+              { text: '杂谈', link: '/blog/dss/' }
             ]
           },
           {
             text: 'Book Sharing',
             items: [
-              { text: 'CU', items: 
+              { text: '体系结构与组成原理', items: 
                [
-                { text: 'Java', link: '/language/chinese' },
-                { text: 'Python', link: '/language/japanese' },
+                { text: '组成原理', link: '/book/cu/' },
                 
                ] 
               },
-              { text: 'DS', items: 
+              { text: '数据结构', items: 
                [
-                { text: '3a', link: '/language/chinese' },
-                { text: '2', link: '/language/japsanese' },
-                { text: '1', link: '/language/japadnese' }
+                { text: '3a', link: '/book/ds/' },
+                
                ] 
               },
             ]
           },
           {
             text: 'Project',
-            link: '/zh/config/'
+            link: '/project/'
           },
           {
             text: 'Resume',
@@ -68,7 +70,62 @@ module.exports = {
           }
         ],
         sidebar: {
-          '/guide/': genSidebarConfig('指南')
+          '/blog/git/': [
+            ['', '=>1 git基础'],
+            ['git-advanced-command.md', '=>2 git进阶'],
+            ['git-remote-command', '=>3 git远端仓库操作'],
+            ['git-branch-command.md', '=>4 git分支操作'],
+            ['git-cooperate-develop-command.md', '=>5 git合作开发']
+          ],
+          // java
+          '/blog/Java/': [
+            {
+              title: 'Java基础',
+              collapsable: false,
+              children: [
+                '',
+                'qq'
+              ]
+            },
+            {
+              title: 'Java进阶',
+              children: [ /* ... */ ]
+            },
+            {
+              title: 'Java框架详解',
+              children: [ /* ... */ ]
+            },
+            {
+              title: 'Jvm详解',
+              children: [ /* ... */ ]
+            }
+          ],
+
+          // python
+          '/blog/Python/': [
+            {
+              title: '基础',
+              
+              children: [
+                '',
+                'qqw'
+              ]
+            },
+            {
+              title: '爬虫',
+              children: [ 
+                '',
+              'qqw' ]
+            },
+            {
+              title: '后端开发',
+              children: [ /* ... */ ]
+            },
+            {
+              title: 'Other',
+              children: [ /* ... */ ]
+            }
+          ]
         }
       }
     }
