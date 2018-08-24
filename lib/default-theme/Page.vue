@@ -52,7 +52,7 @@
       </p>
     </div>
     <slot name="bottom"/>
-    <div id="vcomments"></div>
+    <div id="vcomments" class="vcomments"></div>
     
 
   </div>
@@ -60,22 +60,28 @@
 </template>
 
 <script>
+
 import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
-window.AV = require('leancloud-storage')
-import Valine from 'valine'
 
 export default {
-
-mounted: function(){
-    var valine = new Valine();
-      valine.init({
-          el: '#vcomments',
-          appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
-          appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
-          notify:false, 
-          verify:false, 
-          avatar:'mm', 
-      })
+  mounted: function(){
+    // require window 
+    const Valine = require('valine');
+    if (typeof window !== 'undefined') {
+      this.window = window
+      window.AV = require('leancloud-storage')
+      
+    }
+     
+    new Valine({
+      el: '#vcomments' ,
+      appId: '**',
+      appKey: '**',
+      notify:false, 
+      verify:false, 
+      avatar:'mm', 
+      placeholder: 'just go go' 
+    });
   },
 
   props: ['sidebarItems'],
@@ -261,7 +267,7 @@ function find (page, items, offset) {
       float none
       text-align left
 
-#vcomments {
+.vcomments {
   width 50%
   padding 10px
   display:block;
