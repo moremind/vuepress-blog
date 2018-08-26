@@ -38,9 +38,8 @@ module.exports = {
               { text: 'Python', link: '/blog/Python/' },
               { text: 'PHP', link: '/blog/PHP/' },
               { text: 'Git', link: '/blog/git/' },
-              { text: '数据结构', link: '/blog/ds/' },
-              { text: '其他内容', link: '/blog/other/' },
-              { text: '杂谈', link: '/blog/dss/' }
+              { text: 'Wheel', link: '/blog/ds/' },
+              { text: 'Other', link: '/blog/other/' }
             ]
           },
           {

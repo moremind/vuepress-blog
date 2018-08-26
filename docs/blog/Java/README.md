@@ -2,47 +2,53 @@
 title: Java百度翻译API
 copyright: true
 date: 2018-03-28 22:57:32
+comments: true
 categories:
 - Java
 tags:
 - Java API
 ---
 
-### 百度翻译工具包的下载
+## 百度翻译工具包的下载
 
 > **以下是提供两个百度翻译翻译的工具包下载地址：**
 
-> **1.百度翻译开发者平台：http://appcdn.fanyi.baidu.com/api/demo/java.zip**
+> 1.百度翻译开发者平台：
 
-> **2.csdn的百度翻译工具包：**
-> **http://download.csdn.net/download/hookjony/9957737**
+[百度开发者平台](http://appcdn.fanyi.baidu.com/api/demo/java.zip)
 
-<!--more-->
+> 2.csdn的百度翻译工具包：
 
-<font size="4" color="red">备注：经过本人测试，百度翻译官网下载下来的可能有问题——MD5 类有错误，所以大家可以到本人上传的第2个资源链接中下载需要使用的工具类。因为CSDN不在具有免费的资源下载，所以大家还是需要给我贡献小小的1积分，再此谢谢大家。</font>
 
-----------
+[百度翻译工具包](http://download.csdn.net/download/hookjony/9957737)
 
-### 百度翻译API——新建项目以及各个包文件的导入
-#### gson 包的下载
 
-> **gson 包的下载：http://download.csdn.net/download/hookjony/9957777**
-
-#### 新建项目并且导入百度翻译工具包
-
-![新建java项目](http://img.blog.csdn.net/20170830200128921?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSG9va0pvbnk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
-<font size="4" color="red">新建完成之后可以直接下载下来的百度翻译工具包下的com文件夹导入到项目中（或者将com文件夹拖入到src目录下），本文导入项目再次不在一一赘述，因为更加方便打方式是可以拖入。</font>
-
+> 备注：经过本人测试，百度翻译官网下载下来的可能有问题——MD5 类有错误，所以大家可以到本人上传的第2个资源链接中下载需要使用的工具类。因为CSDN不在具有免费的资源下载，所以大家还是需要给我贡献小小的1积分，再此谢谢大家。
 
 ----------
 
+## 百度翻译API——新建项目以及各个包文件的导入
+### gson 包的下载
 
-#### 导入gson包以及json包
-<font size="4" color="red">在项目下新建文件夹libs，并且将gson包以及json包导入libs目录下，如果需要看源码，请导入各自的源码即可。（笔者建议大家导入源码，方便大家学习）</font>
+> gson 包的下载：
 
-<font size="4" color="black">导入后的目录结构如下:</font>
-![项目目录结构](http://img.blog.csdn.net/20170830201946994?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSG9va0pvbnk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+[gson下载](https://download.csdn.net/download/hookjony/9957777)
+
+## 新建项目并且导入百度翻译工具包
+
+![新建java项目](https://finen-1251602255.cos.ap-shanghai.myqcloud.com/images/images/20170830200128921.png)
+
+> 新建完成之后可以直接下载下来的百度翻译工具包下的com文件夹导入到项目中（或者将com文件夹拖入到src目录下），本文导入项目再次不在一一赘述，因为更加方便打方式是可以拖入。
+
+
+----------
+
+
+### 导入gson包以及json包
+> 在项目下新建文件夹libs，并且将gson包以及json包导入libs目录下，如果需要看源码，请导入各自的源码即可。（笔者建议大家导入源码，方便大家学习）
+
+>导入后的目录结构如下
+![项目目录结构](https://finen-1251602255.cos.ap-shanghai.myqcloud.com/images/images/20170831112115079.png)
 
 
 ----------
@@ -92,8 +98,8 @@ public class Main {
 ----------
 
 
-### 解析Json数据的类
-#### TranslateData 类
+## 解析Json数据的类
+### TranslateData 类
 ```java
 package com.baidu.translate.test;
 
@@ -131,7 +137,7 @@ public class TranslateData {
 }
 
 ```
-#### TranslateResult类
+### TranslateResult类
 
 ```java
 package com.baidu.translate.test;
@@ -159,8 +165,3 @@ public class TranslateResult {
 }
 
 ```
-
-#### 最终项目目录结果
-![项目目录](http://img.blog.csdn.net/20170831112115079?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSG9va0pvbnk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
-

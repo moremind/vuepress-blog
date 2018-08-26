@@ -36,7 +36,6 @@
         <p>{{ feature.details }}</p>
       </div>
     </div>
-
     <Content custom/>
 
     <div
@@ -53,7 +52,7 @@ import NavLink from './NavLink.vue'
 
 export default {
   components: { NavLink },
-
+  
   computed: {
     data () {
       return this.$page.frontmatter

@@ -52,38 +52,17 @@
       </p>
     </div>
     <slot name="bottom"/>
-    <div id="vcomments" class="vcomments"></div>
-    
+    <comments></comments>
 
   </div>
-  
 </template>
 
 <script>
-
 import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
-
+import Comments from './Comments.vue'
 export default {
-  mounted: function(){
-    // require window 
-    const Valine = require('valine');
-    if (typeof window !== 'undefined') {
-      this.window = window
-      window.AV = require('leancloud-storage')
-      
-    }
-     
-    new Valine({
-      el: '#vcomments' ,
-      appId: '**',
-      appKey: '**',
-      notify:false, 
-      verify:false, 
-      avatar:'mm', 
-      placeholder: 'just go go' 
-    });
-  },
-
+  inject: ['reload'],
+  components: {Comments},
   props: ['sidebarItems'],
 
   computed: {
@@ -267,11 +246,4 @@ function find (page, items, offset) {
       float none
       text-align left
 
-.vcomments {
-  width 50%
-  padding 10px
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-}
 </style>

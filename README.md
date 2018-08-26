@@ -23,6 +23,10 @@
 
 > 如果您想用该项目部署您自己的blog，请fork本项目，然后clone到您本地即可更改。如果您懂vue.js,那您可以自己开发一部分插件。
 
+## 评论功能
+[Valine.js使用方法](https://valine.js.org/)
+
+
 ## 官网文档
 
 [Vuepress文档](https://vuepress.docschina.org/)
