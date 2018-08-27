@@ -35,7 +35,10 @@
 [Valine.js文档](https://valine.js.org/)
 
 ## 浏览器支持
-Most browsers(Firefox,Chrome等) 和 Internet Explorer 11+.
+Most browsers(Firefox,Chrome等)
+
+## Bug
+页面变动没有自动刷新路由。
 
 ## LiCENSE
 MIT

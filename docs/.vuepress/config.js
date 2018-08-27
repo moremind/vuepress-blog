@@ -38,25 +38,15 @@ module.exports = {
               { text: 'Python', link: '/blog/Python/' },
               { text: 'PHP', link: '/blog/PHP/' },
               { text: 'Git', link: '/blog/git/' },
-              { text: 'Wheel', link: '/blog/ds/' },
+              { text: 'Wheel', link: '/blog/wheel/' },
               { text: 'Other', link: '/blog/other/' }
             ]
           },
           {
-            text: 'Book Sharing',
+            text: 'Tools Sharing',
             items: [
-              { text: '体系结构与组成原理', items: 
-               [
-                { text: '组成原理', link: '/book/cu/' },
-                
-               ] 
-              },
-              { text: '数据结构', items: 
-               [
-                { text: '3a', link: '/book/ds/' },
-                
-               ] 
-              },
+              { text: 'Book Sharing', link: '/share/book/' },
+              { text: 'Software Sharing', link: '/share/software/' }
             ]
           },
           {
@@ -66,16 +56,14 @@ module.exports = {
           {
             text: 'Resume',
             link: '/about/'
+          },
+          {
+            text: 'Friends',
+            link: '/friends/'
           }
         ],
         sidebar: {
-          '/blog/git/': [
-            ['', '=>1 git基础'],
-            ['git-advanced-command.md', '=>2 git进阶'],
-            ['git-remote-command', '=>3 git远端仓库操作'],
-            ['git-branch-command.md', '=>4 git分支操作'],
-            ['git-cooperate-develop-command.md', '=>5 git合作开发']
-          ],
+          '/blog/git/': genGitSidebarConfig('git学习'),
           // java
           '/blog/Java/': [
             {
@@ -131,21 +119,17 @@ module.exports = {
   }
 }
 
-function genSidebarConfig (title) {
+function genGitSidebarConfig (title) {
   return [
     {
       title,
       collapsable: false,
       children: [
         '',
-        'getting-started',
-        'basic-config',
-        'assets',
-        'markdown',
-        'using-vue',
-        'custom-themes',
-        'i18n',
-        'deploy'
+        'git-advanced-command',
+        'git-remote-command',
+        'git-branch-command',
+        'git-cooperate-develop-command'
       ]
     }
   ]

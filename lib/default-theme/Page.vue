@@ -52,8 +52,7 @@
       </p>
     </div>
     <slot name="bottom"/>
-    <comments></comments>
-
+    <comments v-bind:is="viewComments"></comments>
   </div>
 </template>
 
@@ -61,10 +60,13 @@
 import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
 import Comments from './Comments.vue'
 export default {
-  inject: ['reload'],
   components: {Comments},
   props: ['sidebarItems'],
-
+  data (){
+    return {
+      viewComments: 'Comments'
+    }
+  },
   computed: {
     lastUpdated () {
       if (this.$page.lastUpdated) {
@@ -195,6 +197,7 @@ function find (page, items, offset) {
     }
   }
 }
+
 </script>
 
 <style lang="stylus">
