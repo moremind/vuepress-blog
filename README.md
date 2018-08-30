@@ -34,10 +34,12 @@
 ### 评论工具3 gitment
 [Gitment](https://imsun.github.io/gitment/)
 
-::: tip
-代码已经写好，在.vuepress目录下的enhanceApp.js中，依照网上配置可以很轻松使用Gitment或者Gittalk
-Valine.js的某些bug确实有点烦恼，目前还在修缮中！
-:::
+
+
+    代码已经写好，在.vuepress目录下的enhanceApp.js中，依照网上配置可以很轻松使用Gitment或者Gittalk。
+    Valine.js的某些bug确实有点烦恼，目前还在修缮中！
+
+
 
 ## 官网文档
 
