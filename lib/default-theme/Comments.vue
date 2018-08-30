@@ -23,8 +23,8 @@ export default {
     window.AV = require('leancloud-storage')
     new Valine({
       el: '#vcomments',
-      appId: '',
-      appKey: '',
+      appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
+      appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
       notify: true,
       verify: false,
       avatar: 'monsterid',
@@ -40,7 +40,8 @@ export default {
        * 2. 添加categories and tag
        * 3. 跟换其他主题
        */
-      this.$router.go(0)
+      location.assign(location)
+      // this.$router.go(0)
     }
   },
 }
