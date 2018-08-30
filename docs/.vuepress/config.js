@@ -3,7 +3,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: "Finen's Blog",
+      title: "Finen",
       description: 'Stay Hungry! Stay Foolish!'
     }
   },
@@ -34,10 +34,11 @@ module.exports = {
           {
             text: "Finen's Blog",
             items: [
-              { text: 'Java', link: '/blog/Java/' },
-              { text: 'Python', link: '/blog/Python/' },
-              { text: 'PHP', link: '/blog/PHP/' },
+              { text: 'Java', link: '/blog/java/' },
+              { text: 'Python', link: '/blog/python/' },
+              { text: 'PHP', link: '/blog/php/' },
               { text: 'Git', link: '/blog/git/' },
+              { text: 'Linux', link: '/blog/linux/'},
               { text: 'Wheel', link: '/blog/wheel/' },
               { text: 'Other', link: '/blog/other/' }
             ]
@@ -64,8 +65,11 @@ module.exports = {
         ],
         sidebar: {
           '/blog/git/': genGitSidebarConfig('git学习'),
+
+          // linux
+          '/blog/linux/': genLinuxSidebarConfig('Linux学习'),
           // java
-          '/blog/Java/': [
+          '/blog/java/': [
             {
               title: 'Java基础',
               collapsable: false,
@@ -89,7 +93,7 @@ module.exports = {
           ],
 
           // python
-          '/blog/Python/': [
+          '/blog/python/': [
             {
               title: '基础',
               
@@ -130,6 +134,23 @@ function genGitSidebarConfig (title) {
         'git-remote-command',
         'git-branch-command',
         'git-cooperate-develop-command'
+      ]
+    }
+  ]
+}
+
+function genLinuxSidebarConfig (title) {
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+        'linux-use-root-accout-login',
+        'linux-ubuntu-pip-ssl-module-not-setup',
+        'linux-setup-usual-software',
+        'linux-nginx-basic-command',
+        'linux-python2-python3-setup-use'
       ]
     }
   ]

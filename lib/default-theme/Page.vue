@@ -52,6 +52,7 @@
       </p>
     </div>
     <slot name="bottom"/>
+
     <comments v-bind:is="viewComments"></comments>
   </div>
 </template>
@@ -61,13 +62,16 @@ import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
 import Comments from './Comments.vue'
 export default {
   components: {Comments},
-  props: ['sidebarItems'],
+  props: ['sidebarItems', 'Comments'],
   data (){
     return {
       viewComments: 'Comments'
     }
   },
   computed: {
+    data () {
+      return this.$page.frontmatter
+    },
     lastUpdated () {
       if (this.$page.lastUpdated) {
         return new Date(this.$page.lastUpdated).toLocaleString(this.$lang)
