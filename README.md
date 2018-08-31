@@ -41,6 +41,15 @@
 
 
 
+## 禁止评论
+> 很多情况的页面都不想被评论，所以在每篇文档开头设置即可！如下：
+
+    ---
+    title: git 进阶操作命令
+    comments: true or false
+    ---
+    true: 可以评论，false: 禁止评论
+
 ## 官网文档
 
 [Vuepress文档](https://vuepress.docschina.org/)

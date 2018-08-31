@@ -19,8 +19,8 @@ export default {
     window.AV = require('leancloud-storage')
     const valine =  new Valine({
       el: '#vcomments',
-      appId: '',
-      appKey: '',
+      appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
+      appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
       notify: true,
       avatar: 'monsterid',
       placeholder: '欢迎留言与我分享您的想法...',
