@@ -15,35 +15,45 @@ export default {
     },
   },
   mounted: function(){
-      this.$router.beforeEach((to, from, next) => {
-      next()
-    })
-
     const Valine = require('valine');
     window.AV = require('leancloud-storage')
-    new Valine({
+    const valine =  new Valine({
       el: '#vcomments',
-      appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
-      appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
+      appId: '',
+      appKey: '',
       notify: true,
-      verify: false,
       avatar: 'monsterid',
-      placeholder: '欢迎留言与我分享您的想法...'
+      placeholder: '欢迎留言与我分享您的想法...',
     })
+    // this.$router.afterEach((to, from) => {
+
+    // })
   },
-    watch: {
+  watch: {
     '$route' (to, from) {
-      // 因为不是很懂vue，所以刷新使用这个来写。哈哈哈，不知道如何组件内刷新。有了解的请联系我：hefengen@hotmail.com
+      if(to.path !==  from.path){
+        // location.assign(location)
+        // 因为不是很懂vue，所以刷新使用这个来写。哈哈哈，不知道如何组件内刷新。有了解的请联系我：hefengen@hotmail.com
+        this.$router.go(0)
+        // console.log('我在这里要刷新一下')
+      }else{
+
+      }
+      
       /**
        * TODO:
        * 1. 使用其他方法更新评论组件 或者使用其他较为好用的评论组件
        * 2. 添加categories and tag
        * 3. 跟换其他主题
        */
-      location.assign(location)
-      // this.$router.go(0)
     }
   },
+  beforeUpdate: function(){
+  },
+  updated: function(){
+  },
+  destroyed: function (){
+  }
 }
 </script>
 
