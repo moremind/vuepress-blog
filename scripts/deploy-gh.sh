@@ -16,7 +16,7 @@ cd ..
 cd vuepress
 
 # 如果是发布到自定义域名
- echo 'www.finen.tech' > CNAME
+ echo 'www.finen.top' > CNAME
 
 git init
 git add -A
@@ -26,6 +26,7 @@ git commit -m 'update'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
- git push -f git@github.com:hirCodd/Finen.git master
+#git push -f git@git.coding.net:aqazzz/Finen.git master
+git push -f git@github.com:hirCodd/Finen.git master
 
 cd -

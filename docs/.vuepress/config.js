@@ -1,5 +1,11 @@
+const path = require('path')
+const container = require('markdown-it-container')
+
 module.exports = {
+  plugins: [ '@vuepress/blog', ['@vuepress/back-to-top', true], '@vuepress/google-analytics'],
+  
   dest: 'vuepress',
+  ga: "UA-131334453-1",
   locales: {
     '/': {
       lang: 'zh-CN',
@@ -24,6 +30,12 @@ module.exports = {
     repo: 'hirCodd',
     editLinks: true,
     docsDir: 'docs',
+    // algolia: {
+    //   applicationID: 'SGYG3Y89ZT',
+    //   apiKey: 'f417527242ae53d1f9d2913eb1ef07d4',
+    //   indexName: 'FinenBlog'
+    // },
+    // clientRootMixin: path.resolve(__dirname, 'mixin.js'),
     locales: {
       '/': {
         label: '简体中文',
@@ -40,7 +52,9 @@ module.exports = {
               { text: 'Git', link: '/blog/git/' },
               { text: 'Linux', link: '/blog/linux/'},
               { text: 'Wheel', link: '/blog/wheel/' },
-              { text: 'Other', link: '/blog/other/' }
+              { text: 'Other', link: '/blog/others/'},
+              { text: '生活随记', link: '/blog/listrecord/'}
+              
             ]
           },
           {
@@ -63,11 +77,20 @@ module.exports = {
             link: '/friends/'
           }
         ],
+
         sidebar: {
+          // git
           '/blog/git/': genGitSidebarConfig('git学习'),
 
           // linux
           '/blog/linux/': genLinuxSidebarConfig('Linux学习'),
+
+          // wheel
+          '/blog/wheel/': genWheelSidebarConfig('Linux学习'),
+
+          // other
+          '/blog/others/': genOthersSidebarConfig('Linux学习'),
+
           // java
           '/blog/java/': [
             {
@@ -80,7 +103,10 @@ module.exports = {
             },
             {
               title: 'Java进阶',
-              children: [ /* ... */ ]
+              children: [ 
+                '',
+                'qq'
+               ]
             },
             {
               title: 'Java框架详解',
@@ -92,31 +118,31 @@ module.exports = {
             }
           ],
 
-          // python
           '/blog/python/': [
             {
-              title: '基础',
-              
+              title: 'Python基础',
+              collapsable: true,
               children: [
                 '',
-                'qqw'
               ]
             },
             {
-              title: '爬虫',
+              title: 'Python爬虫',
               children: [ 
-                '',
-              'qqw' ]
+                'selenium-api-docs',
+                'python-crawling-toutiao-picture'
+               ]
             },
             {
-              title: '后端开发',
+              title: 'Python后端',
               children: [ /* ... */ ]
             },
             {
               title: 'Other',
               children: [ /* ... */ ]
             }
-          ]
+          ],
+          
         }
       }
     }
@@ -151,6 +177,31 @@ function genLinuxSidebarConfig (title) {
         'linux-setup-usual-software',
         'linux-nginx-basic-command',
         'linux-python2-python3-setup-use'
+      ]
+    }
+  ]
+}
+
+function genWheelSidebarConfig(title){
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+      ]
+    }
+  ]
+}
+
+function genOthersSidebarConfig (title) {
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+        'qduoj-development-record'
       ]
     }
   ]
