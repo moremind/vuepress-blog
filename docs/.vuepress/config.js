@@ -2,10 +2,21 @@ const path = require('path')
 const container = require('markdown-it-container')
 
 module.exports = {
-  plugins: [ '@vuepress/blog', ['@vuepress/back-to-top', true], '@vuepress/google-analytics'],
-  
   dest: 'vuepress',
-  ga: "UA-131334453-1",
+  // ga: "UA-131334453-1",
+  plugins: {
+    '@vuepress/pwa': {
+       serviceWorker: true,
+       popupComponent: 'MySWUpdatePopup',
+       updatePopup: true
+     }
+  },
+  plugins: ['@vuepress/pwa'],
+  plugins: [
+    ['@vuepress/google-analytics', {
+        ga: 'UA-131334453-1'//你的Google Analytics ID
+    }],
+  ],
   locales: {
     '/': {
       lang: 'zh-CN',
@@ -28,14 +39,9 @@ module.exports = {
   theme: 'vue',
   themeConfig: {
     repo: 'hirCodd',
-    editLinks: true,
+    editLinks: false,
     docsDir: 'docs',
-    // algolia: {
-    //   applicationID: 'SGYG3Y89ZT',
-    //   apiKey: 'f417527242ae53d1f9d2913eb1ef07d4',
-    //   indexName: 'FinenBlog'
-    // },
-    // clientRootMixin: path.resolve(__dirname, 'mixin.js'),
+    lastUpdated: 'Last Updated' ,// 文档更新时间：每个文件git最后提交的时间
     locales: {
       '/': {
         label: '简体中文',
@@ -53,7 +59,7 @@ module.exports = {
               { text: 'Linux', link: '/blog/linux/'},
               { text: 'Wheel', link: '/blog/wheel/' },
               { text: 'Other', link: '/blog/others/'},
-              { text: '生活随记', link: '/blog/listrecord/'}
+              { text: '生活随记', link: '/blog/life-record/'}
               
             ]
           },
@@ -75,10 +81,17 @@ module.exports = {
           {
             text: 'Friends',
             link: '/friends/'
-          }
+          },
+          {
+            text: 'Tags',
+            link: '/tags/'
+          },
         ],
 
         sidebar: {
+          '/project/':genPorjectSidebarConfig('Project'),
+          
+
           // git
           '/blog/git/': genGitSidebarConfig('git学习'),
 
@@ -91,7 +104,10 @@ module.exports = {
           // other
           '/blog/others/': genOthersSidebarConfig('Linux学习'),
 
-          // java
+          // record
+          '/blog/life-record/': genRecordSidebarConfig('生活随笔'),
+
+          // java栏目
           '/blog/java/': [
             {
               title: 'Java基础',
@@ -118,6 +134,7 @@ module.exports = {
             }
           ],
 
+          // python栏目
           '/blog/python/': [
             {
               title: 'Python基础',
@@ -142,11 +159,12 @@ module.exports = {
               children: [ /* ... */ ]
             }
           ],
+
           
         }
       }
     }
-  }
+  },
 }
 
 function genGitSidebarConfig (title) {
@@ -176,7 +194,8 @@ function genLinuxSidebarConfig (title) {
         'linux-ubuntu-pip-ssl-module-not-setup',
         'linux-setup-usual-software',
         'linux-nginx-basic-command',
-        'linux-python2-python3-setup-use'
+        'linux-python2-python3-setup-use',
+        'linux-manjaro'
       ]
     }
   ]
@@ -202,6 +221,32 @@ function genOthersSidebarConfig (title) {
       children: [
         '',
         'qduoj-development-record'
+      ]
+    }
+  ]
+}
+
+function genRecordSidebarConfig (title) {
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+        '2019'
+      ]
+    }
+  ]
+}
+
+function genPorjectSidebarConfig(title){
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+        'qduoj-add-problem',
       ]
     }
   ]

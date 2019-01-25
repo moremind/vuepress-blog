@@ -1,6 +1,6 @@
 ---
-title: vue
-comments: true
+title: project
 ---
 
-## > 等待跟新中
+## project
+1. [QDUOJ自动化加题程序](https://github.com/hirCodd/AutoAddProblem)
