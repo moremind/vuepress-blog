@@ -44,11 +44,6 @@
         slot="bottom"
       />
     </Page>
-    <template>
-      <div>
-        <BackToTop></BackToTop>
-      </div>
-    </template>
   </div>
 </template>
 
@@ -57,11 +52,10 @@ import Home from '../components/Home.vue'
 import Navbar from '../components/Navbar.vue'
 import Page from '../components/Page.vue'
 import Sidebar from '../components/Sidebar.vue'
-import BackToTop from '../components/BackToTop.vue'
 import { resolveSidebarItems } from '../util'
 
 export default {
-  components: { Home, Page, Sidebar, Navbar, BackToTop},
+  components: { Home, Page, Sidebar, Navbar },
 
   data () {
     return {
