@@ -4,7 +4,6 @@ const container = require('markdown-it-container')
 module.exports = {
   dest: 'vuepress',
   title: "Finen",
-  ga: "UA-131334453-1",
   description: 'Stay Hungry! Stay Foolish!',
   head: [
     ['link', { rel: 'icon', href: `/logo.png` }],
@@ -31,6 +30,9 @@ module.exports = {
     ['@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: true
+    }],
+    ['@vuepress/google-analytics', {
+      ga: 'UA-131334453-1'
     }],
   ],
   themeConfig: {
