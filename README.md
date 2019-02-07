@@ -12,7 +12,7 @@
 > 打开浏览器，输入localhost:8080即可访问
 
 ## demo
-[demo](https://www.finen.tech/)
+[demo](https://www.finen.top/)
 
 ## 开发
 
