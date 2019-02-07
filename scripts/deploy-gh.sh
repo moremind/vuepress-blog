@@ -16,9 +16,9 @@ cd ..
 cd vuepress
 
 # 如果是发布到自定义域名
- echo 'www.finen.top' > CNAME
-
-git init
+# echo 'www.finen.top' > CNAME
+# 初始化git仓库
+# git init
 git add -A
 git commit -m 'update'
 

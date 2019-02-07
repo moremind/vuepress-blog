@@ -39,8 +39,6 @@ module.exports = {
     repo: 'hirCodd',
     label: '简体中文',
     selectText: '选择语言',
-    editLinkText: '在 GitHub 上编辑此页',
-    lastUpdated: '上次更新',
     nav: require('./nav/index'),
     sidebar: {
       '/blog/git/': genGitSidebarConfig('git学习'),
@@ -49,13 +47,17 @@ module.exports = {
       '/blog/linux/': genLinuxSidebarConfig('Linux学习'),
 
       // wheel
-      '/blog/wheel/': genWheelSidebarConfig('Linux学习'),
+      '/blog/wheel/': genWheelSidebarConfig('轮子'),
 
       // other
-      '/blog/others/': genOthersSidebarConfig('Linux学习'),
+      '/blog/others/': genOthersSidebarConfig('其他'),
+
+      '/blog/frontend/': genFrontendConfig('前端开发'),
 
       // record
       '/blog/life-record/': genRecordSidebarConfig('生活随笔'),
+      
+      '/project/': genPorjectSidebarConfig('项目记录'),
 
        // java栏目
       '/blog/java/': [
@@ -109,15 +111,6 @@ module.exports = {
       }],
     }
   },
-
-//   clientRootMixin: path.resolve(__dirname, 'mixin.js'),
-//   extendMarkdown (md) {
-//     md.use(container, 'upgrade', {
-//       render: (tokens, idx) => tokens[idx].nesting === 1
-//         ? `<UpgradePath title="${tokens[idx].info.trim().slice('upgrade'.length).trim()}">`
-//         : '</UpgradePath>'
-//     })
-//   },
 }
 function genGitSidebarConfig (title) {
   return [
@@ -199,6 +192,19 @@ function genPorjectSidebarConfig(title){
       children: [
         '',
         'qduoj-add-problem',
+      ]
+    }
+  ]
+}
+
+function genFrontendConfig (title){
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+        'wxapp'
       ]
     }
   ]

@@ -5,6 +5,7 @@ module.exports = [
       { text: 'Java', link: '/blog/java/' },
       { text: 'Python', link: '/blog/python/' },
       { text: 'PHP', link: '/blog/php/' },
+      { text: 'Frontend', link: '/blog/frontend/'},
       { text: 'Git', link: '/blog/git/' },
       { text: 'Linux', link: '/blog/linux/'},
       { text: 'Wheel', link: '/blog/wheel/' },

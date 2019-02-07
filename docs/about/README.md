@@ -4,7 +4,6 @@
 
 
  - 邮箱:hefengen@hotmail.com
- - 工作年限：1年
  - 技术博客：[https://www.finen.top/](https://www.finen.top/)
  - Github：[https://github.com/hirCodd](https://github.com/hirCodd)
 
