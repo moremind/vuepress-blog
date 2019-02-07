@@ -1,4 +1,4 @@
-## vuepress版本为1.x
+## vuepress版本为0.14.x
 ## 运行项目
 
     yarn install //安装依赖
@@ -14,6 +14,12 @@
 ## demo
 [demo](https://www.finen.tech/)
 
+## 广告？
+> 因为使用了vuepress-theme-vue主题，所以需要删除一部分代码即可正常。在node_modules下搜索vuepress-theme-vue在Layout.vue中删除以下代码即可
+
+    <CarbonAds slot="sidebar-top"/>
+    <BuySellAds slot="page-bottom"/>
+
 ## 开发
 
 > 如果您想用该项目部署您自己的blog，请fork本项目，然后clone到您本地即可更改。如果您懂vue.js,那您可以自己开发一部分插件。
@@ -28,6 +34,7 @@
 
 ### 评论工具3 gitment
 [Gitment](https://imsun.github.io/gitment/)
+
 
 
     代码已经写好，在.vuepress目录下的enhanceApp.js中，依照网上配置可以很轻松使用Gitment或者Gittalk。
@@ -54,7 +61,8 @@
 ## 浏览器支持
 Most browsers(Firefox,Chrome等)
 
-## vuepress 0.14版本请参看readme0.x.md
+## Bug
+页面变动没有自动刷新路由。
 
 ## TODO
 
