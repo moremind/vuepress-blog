@@ -62,26 +62,20 @@ module.exports = {
        // java栏目
       '/blog/java/': [
         {
-          title: 'Java基础',
-          collapsable: false,
+          title: 'Java基础进阶',
+          collapsable: true,
           children: [
             '',
-            'qq'
           ]
         },
         {
-          title: 'Java进阶',
+          title: 'Java框架',
           children: [ 
-            '',
-            'qq'
+            'spring-boot'
           ]
         },
         {
-          title: 'Java框架详解',
-          children: [ /* ... */ ]
-        },
-        {
-          title: 'Jvm详解',
+          title: 'Java微服务',
           children: [ /* ... */ ]
         }],
 
