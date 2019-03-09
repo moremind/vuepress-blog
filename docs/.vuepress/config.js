@@ -27,9 +27,15 @@ module.exports = {
   },
   plugins: [
     ['@vuepress/back-to-top', true],
+    ['@vuepress/container', true],
+    ['@vuepress/nprogress', true],
+    ['@vuepress/active-header-links', true],
     ['@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: true
+    }],
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
     }],
     ['@vuepress/google-analytics', {
       ga: 'UA-131334453-1'
@@ -60,52 +66,14 @@ module.exports = {
       '/project/': genPorjectSidebarConfig('项目记录'),
 
        // java栏目
-      '/blog/java/': [
-        {
-          title: 'Java基础进阶',
-          collapsable: true,
-          children: [
-            '',
-          ]
-        },
-        {
-          title: 'Java框架',
-          children: [ 
-            'spring-boot'
-          ]
-        },
-        {
-          title: 'Java微服务',
-          children: [ /* ... */ ]
-        }],
+      '/blog/java/': genJavaArticle(),
 
       // python栏目
-      '/blog/python/': [
-      {
-        title: 'Python基础',
-        collapsable: true,
-        children: [
-          '',
-        ]
-      },
-      {
-        title: 'Python爬虫',
-        children: [ 
-          'selenium-api-docs',
-          'python-crawling-toutiao-picture'
-        ]
-      },
-      {
-        title: 'Python后端',
-        children: [ /* ... */ ]
-      },
-      {
-        title: 'Other',
-        children: [ /* ... */ ]
-      }],
+      '/blog/python/': genPythonArticle()
     }
   },
 }
+
 function genGitSidebarConfig (title) {
   return [
     {
@@ -202,4 +170,68 @@ function genFrontendConfig (title){
       ]
     }
   ]
+}
+
+function genJavaArticle() {
+  return [
+    {
+      title: 'Java基础进阶',
+      collapsable: true,
+      children: [
+        '',
+      ]
+    },
+    {
+      title: 'Spring',
+      children: [ 
+        
+      ]
+    },
+    {
+      title: 'SpringMVC',
+      children: [ 
+        
+      ]
+    },
+    {
+      title: 'SpringBoot',
+      children: [ 
+        'springboot/spring-boot'
+      ]
+    },
+    {
+      title: 'Mybatis',
+      children: [ 
+        'mybatis/mybatis-param-process',
+        'mybatis/mybatis-select'
+      ]
+    },
+  ]
+}
+
+function genPythonArticle(){
+  return [
+    {
+      title: 'Python基础',
+      collapsable: true,
+      children: [
+        '',
+      ]
+    },
+    {
+      title: 'Python爬虫',
+      children: [ 
+        'selenium-api-docs',
+        'python-crawling-toutiao-picture'
+      ]
+    },
+    {
+      title: 'Python后端',
+      children: [ /* ... */ ]
+    },
+    {
+      title: 'Other',
+      children: [ /* ... */ ]
+    }]
+  
 }

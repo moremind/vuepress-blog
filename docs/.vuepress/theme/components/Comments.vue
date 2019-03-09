@@ -39,7 +39,7 @@ export default {
         setTimeout(() => {
           //重新刷新valine
           this.createValine()
-        }, 300)
+        }, 180)
       }
       
       /**

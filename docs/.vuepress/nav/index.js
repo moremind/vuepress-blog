@@ -2,15 +2,46 @@ module.exports = [
   {
     text: "Finen's Blog",
     items: [
-      { text: 'Java', link: '/blog/java/' },
-      { text: 'Python', link: '/blog/python/' },
-      { text: 'PHP', link: '/blog/php/' },
-      { text: 'Frontend', link: '/blog/frontend/'},
-      { text: 'Git', link: '/blog/git/' },
-      { text: 'Linux', link: '/blog/linux/'},
-      { text: 'Wheel', link: '/blog/wheel/' },
-      { text: 'Other', link: '/blog/others/'},
-      { text: '生活随记', link: '/blog/life-record/'}
+      {
+        text: 'BackEnd',
+        items: [
+          {
+            text: 'Java', 
+            link: '/blog/java/'
+          },
+          {
+            text: 'Python', 
+            link: '/blog/python/'
+          }
+        ]
+      },
+      {
+        text: 'FrontEnd',
+        items: [
+          {
+            text: 'Frontend', 
+            link: '/blog/frontend/'
+          }
+        ]
+      },
+      {
+        text: 'Linux',
+        items: [
+          {
+            text: 'Linux',
+            link: '/blog/linux/'
+          }
+        ]
+      },
+      {
+        text: 'Other',
+        items: [
+          { text: 'Git', link: '/blog/git/' },
+          { text: 'Wheel', link: '/blog/wheel/' },
+          { text: 'Other', link: '/blog/others/'},
+          { text: 'LifeRecord', link: '/blog/life-record/'}
+        ]
+      },     
     ]
   },
   {

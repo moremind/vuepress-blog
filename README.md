@@ -1,6 +1,5 @@
-[![vuepress](https://img.shields.io/badge/vuepress-1.0.0--alpha.32-blue.svg)](https://v1.vuepress.vuejs.org/)
+[![vuepress](https://img.shields.io/badge/vuepress-1.0.0--alpha.42-blue.svg)](https://v1.vuepress.vuejs.org/)
 [![valine](https://img.shields.io/badge/valine-1.3.4-blue.svg)](https://valine.js.org/)
-
 ## vuepress版本为1.x
 ## 运行项目
 
