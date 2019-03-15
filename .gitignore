@@ -5,9 +5,5 @@ node_modules
 vuepress
 TODOs.md
 .idea
-blog
-docs/share
-docs/friends
-docs/project
-docs/about
-default-theme/Comments.vue
+docs/blog/
+
