@@ -30,6 +30,7 @@ module.exports = {
     ['@vuepress/container', true],
     ['@vuepress/nprogress', true],
     ['@vuepress/active-header-links', true],
+    ['@vuepress/register-components', true],
     ['@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: true
@@ -196,14 +197,21 @@ function genJavaArticle() {
     {
       title: 'SpringBoot',
       children: [ 
-        'springboot/spring-boot'
+        'springboot/spring-boot',
+        'springboot/principle',
+        'springboot/conf-file',
+        'springboot/profile-file',
+        'springboot/conf-file-loading',
+        'springboot/auto-configuration'
       ]
     },
     {
       title: 'Mybatis',
       children: [ 
         'mybatis/mybatis-param-process',
-        'mybatis/mybatis-select'
+        'mybatis/mybatis-select',
+        'mybatis/mybatis-dynamicSQL',
+        'mybatis/mybatis-cache'
       ]
     },
   ]
