@@ -55,6 +55,8 @@ body
 
 .content:not(.custom)
   @extend $wrapper
+  > *:first-child
+    margin-top $navbarHeight
   a:hover
     text-decoration underline
   p.demo

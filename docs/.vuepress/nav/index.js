@@ -56,6 +56,10 @@ module.exports = [
     link: '/project/'
   },
   {
+    text: 'Archives',
+    link: '/archives/',
+  },
+  {
     text: 'Resume',
     link: '/about/'
   },

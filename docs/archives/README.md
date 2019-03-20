@@ -1,0 +1,3 @@
+---
+---
+<Archives :pages="$site.pages"/>

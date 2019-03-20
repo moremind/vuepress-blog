@@ -51,7 +51,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin-top: 150px;
+    margin-top: 120px;
   }
   .nickname span {
     font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
@@ -86,7 +86,7 @@ export default {
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1200px) {
   .box-card {
     width: 100%;
   }
@@ -133,10 +133,7 @@ export default {
 }
 </style>
 <style>
-.el-card__body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.cardpage>.el-card >.el-card__body {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
 }
 </style>
