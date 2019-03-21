@@ -22,6 +22,11 @@
 
 > 如果您想用该项目部署您自己的blog，请fork本项目，然后clone到您本地即可更改。如果您懂vue.js,那您可以自己开发一部分插件。
 
+## 功能
+- [x] Archives
+- [ ] Tags Cloud
+- [ ] Cate
+
 ## 评论功能
 
 ### 评论工具1 Valine.js

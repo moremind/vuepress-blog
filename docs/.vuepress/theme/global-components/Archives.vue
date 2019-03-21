@@ -1,14 +1,17 @@
 <template>
   <div class="archives-content" style="margin-top: 50px">
-    <div class="block" >
+    <div class="block">
       <el-timeline>
-        <el-timeline-item timestamp="2018/4/12" placement="top" icon="el-icon-loading">
+        <el-timeline-item v-for="item in ArchivesArray" :timestamp="item.frontmatter.date" placement="top" icon="el-icon-loading">
           <el-card>
-            <h4>更新 Github 模板</h4>
-            <p>王小虎 提交于 2018/4/12 20:46</p>
+            <p class="article-title"><router-link :to="item.regularPath">{{ item.frontmatter.title}}</router-link></p>
+            <p>Finen于{{ item.frontmatter.date}}发布该文章</p>
+            <!-- <el-tag>原创</el-tag><br/> -->
+            <div class="archives-tag">
+              <p class="article-tag">Tags: <el-tag v-for="tag in item.frontmatter.tags">{{tag}}</el-tag></p>
+            </div>
           </el-card>
         </el-timeline-item>
-        
       </el-timeline>
     </div>
   </div>
@@ -23,97 +26,51 @@ export default {
       default: []
     }
   },
-  data() {
+  data () {
     return {
-      selectedTags: []
-    };
+      ArchivesArray: []
+    }
+  },
+  mounted: function () {
+      this.filterListFun()
   },
   computed: {
-    filteredList() {
-      if (this.pages) {
-        return this.pages
-          .filter(item => {
-            const isBlogPost = !!item.frontmatter.blog;
-            const isReadyToPublish =
-              new Date(item.frontmatter.date) <= new Date();
-            // check if tags contain any of the selected tags
-            // const hasTags = item.frontmatter.tags && item.frontmatter.tags.some(tag => this.selectedTags.includes(tag))
-            // check if tags contain all of the selected tags
-            const hasTags =
-              !!item.frontmatter.tags &&
-              this.selectedTags.every(tag =>
-                item.frontmatter.tags.includes(tag)
-              );
-            if (
-              !isBlogPost ||
-              !isReadyToPublish ||
-              (this.selectedTags.length > 0 && !hasTags)
-            ) {
-              return false;
-            }
-            return true;
-          })
-          .sort(
-            (a, b) =>
-              new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
-          );
-      }
+    // 用于刷选frontmatter中有post: true的数据
+    filterList () {
+      
     }
+
+    //将筛选出来的数据进行时间排序
   },
   methods: {
-    getYears: function() {
-      return [
-        ...new Set(
-          this.filteredList.map(item =>
-            new Date(item.frontmatter.date).getFullYear()
-          )
-        )
-      ];
-    },
-    getMonths: function(year) {
-      return [
-        ...new Set(
-          this.filteredList
-            .filter(
-              item => new Date(item.frontmatter.date).getFullYear() == year
-            )
-            .map(item => new Date(item.frontmatter.date).getMonth())
-        )
-      ];
-    },
-    postsByDate(year, month) {
-      return this.filteredList.filter(item => {
-        const date = new Date(item.frontmatter.date);
-        return date.getFullYear() == year && date.getMonth() == month;
+    filterListFun () {
+      this.pages.forEach(element => {
+        if(element.frontmatter.post==true){
+          this.ArchivesArray.push(element);
+        }
       });
     }
-  },
-  filters: {
-    // Filter definitions
-    monthToLongName(value) {
-      const months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ];
-      return months[value];
-    }
   }
-};
-console.log("sss");
+}
 </script>
 <style>
 .el-timeline-item__content > .el-card > .el-card__body {
   text-align: left;
+}
+.el-card>.el-card__body>.article-title{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+      "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+.archives-tag>.article-tag{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+      "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+.archives-tag>.article-tag>.el-tag{
+  margin-left: 5px;
 }
 </style>
 
