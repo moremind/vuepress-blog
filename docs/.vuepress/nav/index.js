@@ -45,19 +45,28 @@ module.exports = [
     ]
   },
   {
-    text: 'Tools Sharing',
-    items: [
-      { text: 'Book Sharing', link: '/share/book/' },
-      { text: 'Software Sharing', link: '/share/software/' }
-    ]
-  },
-  {
-    text: 'Project',
-    link: '/project/'
-  },
-  {
     text: 'Archives',
     link: '/archives/',
+  },
+  {
+    text: 'Tags',
+    link: '/tags/',
+  },
+  {
+    text: 'Another',
+    items: [
+      {
+        text: 'Project',
+        link: '/project/'
+      },
+      {
+        text: 'Tools Sharing',
+        items: [
+          { text: 'Book Sharing', link: '/share/book/' },
+          { text: 'Software Sharing', link: '/share/software/' }
+        ]
+      },
+    ],
   },
   {
     text: 'Resume',
