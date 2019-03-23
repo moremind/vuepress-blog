@@ -57,7 +57,9 @@ module.exports = [
     items: [
       {
         text: 'Project',
-        link: '/project/'
+        items: [
+          { text: 'Project', link: '/project/'},
+        ]
       },
       {
         text: 'Tools Sharing',

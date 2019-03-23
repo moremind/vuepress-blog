@@ -41,13 +41,6 @@ export default {
           this.createValine()
         }, 180)
       }
-      
-      /**
-       * TODO:
-       * 1. 使用其他方法更新评论组件 或者使用其他较为好用的评论组件
-       * 2. 添加categories and tag
-       * 3. 更换其他主题
-       */
     }
   }
 }

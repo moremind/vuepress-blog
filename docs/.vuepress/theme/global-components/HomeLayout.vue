@@ -21,7 +21,7 @@
 
     <hr>
     <div class="footer">
-      <p>Copyright © 2017-2018 Finen</p>
+      <p>Copyright © 2017-2019 Finen</p>
     </div>
   </div>
 </template>

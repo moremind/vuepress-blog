@@ -1,5 +1,14 @@
+<!--
+ * @Description: Achieve Archives
+ * @Author: finen
+ * @LastEditors: Please set LastEditors
+ * @Date: 2019-03-20 21:33:36
+ * @LastEditTime: 2019-03-24 02:36:15
+ -->
+
 <template>
   <div class="archives-content" style="margin-top: 50px">
+    <div class="content-top">嗯..! 目前共计 {{ArchivesArrayLength}} 篇日志！继续努力。</div>
     <div class="block">
       <el-timeline :reverse="true">
         <el-timeline-item
@@ -10,10 +19,10 @@
         >
           <el-card>
             <p class="article-title">
-              <router-link :to="item.regularPath">{{ item.frontmatter.title}}</router-link>
+              <router-link :to="item.regularPath">{{ item.frontmatter.title }}</router-link>
             </p>
             <p>Finen于{{ item.frontmatter.date}}发布该文章</p>
-            <!-- <el-tag>原创</el-tag><br/> -->
+            <el-tag>原创</el-tag><br/>
             <div class="archives-tag">
               <p class="article-tag">
                 Tags:
@@ -38,19 +47,19 @@ export default {
   },
   data() {
     return {
-      ArchivesArray: []
+      ArchivesArray: [],
+      ArchivesArrayLength: 0
     };
   },
   mounted: function() {
     this.filterArchivesList();
   },
-  computed: {
-    // 用于刷选frontmatter中有post: true的数据
-    filterList() {}
-
-    //将筛选出来的数据进行时间排序
-  },
   methods: {
+    /**
+     * @description: select post=true
+     * @param {type} 
+     * @return: 
+     */
     filterArchivesList() {
       this.pages.forEach(element => {
         if (element.frontmatter.post == true) {
@@ -61,7 +70,14 @@ export default {
       });
       // 通过时间进行排序
       this.ArchivesArray.sort(this.compare("ArticleDate"));
+      // count Archives length
+      this.ArchivesArrayLength = this.ArchivesArray.length;
     },
+    /**
+     * @description: format date
+     * @param {type} 
+     * @return: 
+     */
     formatDate(time) {
       var dateTime = new Date(new Date(time).getTime());
       var y = dateTime.getFullYear();
@@ -71,6 +87,11 @@ export default {
       var sendDate = y + "-" + m + "-" + d;
       return sendDate;
     },
+    /**
+     * @description: 对时间进行排序
+     * @param {type} 
+     * @return: 
+     */
     compare(pro) { 
       return function (obj1, obj2) { 
           var val1 = obj1[pro]; 
@@ -88,6 +109,13 @@ export default {
 };
 </script>
 <style>
+.archives-content>.content-top{
+  margin: 5px 0 15px 0px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
 .el-timeline-item__content > .el-card > .el-card__body {
   text-align: left;
 }

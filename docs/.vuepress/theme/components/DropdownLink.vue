@@ -102,12 +102,12 @@ export default {
           font-size 0.9em
       a
         display block
-        line-height 1.7rem
+        line-height 1.5rem
         position relative
         border-bottom none
         font-weight 400
         margin-bottom 0
-        padding 0 1.5rem 0 1.25rem
+        padding 0 1.2rem 0 1.8rem
         &:hover
           color $accentColor
         &.router-link-active
@@ -144,7 +144,7 @@ export default {
           line-height 2rem
         .dropdown-subitem
           font-size 14px
-          padding-left 1rem
+          padding-left 0.2rem
 
 @media (min-width: $MQMobile)
   .dropdown-wrapper
