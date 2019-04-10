@@ -3,7 +3,7 @@
  * @Author: finen
  * @LastEditors: Please set LastEditors
  * @Date: 2019-03-20 21:33:36
- * @LastEditTime: 2019-03-24 02:36:15
+ * @LastEditTime: 2019-04-10 23:26:29
  -->
 
 <template>
@@ -22,7 +22,6 @@
               <router-link :to="item.regularPath">{{ item.frontmatter.title }}</router-link>
             </p>
             <p>Finen于{{ item.frontmatter.date}}发布该文章</p>
-            <el-tag>原创</el-tag><br/>
             <div class="archives-tag">
               <p class="article-tag">
                 Tags:

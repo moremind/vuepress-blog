@@ -1,0 +1,15 @@
+certifi==2019.3.9
+chardet==3.0.4
+cos-python-sdk-v5==1.6.6
+coscmd==1.8.5.32
+DateTime==4.3
+dicttoxml==1.7.4
+idna==2.8
+prettytable==0.7.2
+pytz==2018.9
+PyYAML==5.1
+requests==2.21.0
+six==1.12.0
+tqdm==4.31.1
+urllib3==1.24.1
+zope.interface==4.6.0

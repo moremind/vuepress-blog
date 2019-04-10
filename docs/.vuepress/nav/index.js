@@ -44,6 +44,24 @@ module.exports = [
       },     
     ]
   },
+  // {
+  //   text: 'Another',
+  //   items: [
+  //     {
+  //       text: 'Project',
+  //       items: [
+  //         { text: 'Project', link: '/project/'},
+  //       ]
+  //     },
+  //     {
+  //       text: 'Tools Sharing',
+  //       items: [
+  //         { text: 'Book Sharing', link: '/share/book/' },
+  //         { text: 'Software Sharing', link: '/share/software/' }
+  //       ]
+  //     },
+  //   ],
+  // },
   {
     text: 'Archives',
     link: '/archives/',
@@ -51,24 +69,6 @@ module.exports = [
   {
     text: 'Tags',
     link: '/tags/',
-  },
-  {
-    text: 'Another',
-    items: [
-      {
-        text: 'Project',
-        items: [
-          { text: 'Project', link: '/project/'},
-        ]
-      },
-      {
-        text: 'Tools Sharing',
-        items: [
-          { text: 'Book Sharing', link: '/share/book/' },
-          { text: 'Software Sharing', link: '/share/software/' }
-        ]
-      },
-    ],
   },
   {
     text: 'Resume',

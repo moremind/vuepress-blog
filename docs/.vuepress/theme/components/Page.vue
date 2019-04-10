@@ -1,9 +1,8 @@
 <template>
   <main class="page">
     <slot name="top"/>
-    
-    <Content/>
-
+    <TitleContent :pages="$page"/>
+    <Content :custom="false"/>
     <footer class="page-edit">
       <div
         class="edit-link"
@@ -71,7 +70,6 @@ export default {
   data (){
     return {
       viewComments: 'Comments',
-      
     }
   },
   computed: {
