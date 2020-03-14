@@ -6,6 +6,7 @@
 
 ## vuepress版本为1.3.1
 
+## 欢迎使用主题[vuepress-theme-tassel](https://github.com/hirCodd/vuepress-theme-tassel)
 ## 快速开始
 ```bash
 git clone https://github.com/hirCodd/vuepress-blog.git
