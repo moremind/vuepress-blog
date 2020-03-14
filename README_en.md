@@ -4,7 +4,7 @@
 
 [中文文档](https://github.com/hirCodd/vuepress-blog/blob/master/README.md)|[English](https://github.com/hirCodd/vuepress-blog/blob/master/README_en.md)
 
-## vuepress: 1.0.0-alpha.42
+## vuepress: 1.3.1
 
 ## Quick Start
 ```bash

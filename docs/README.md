@@ -1,3 +1,3 @@
 ---
+home:true
 ---
-<HomeLayout/>

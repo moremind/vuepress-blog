@@ -1,10 +1,12 @@
-const path = require('path')
-const container = require('markdown-it-container')
-
 module.exports = {
   dest: 'vuepress',
-  title: "Finen",
-  description: 'Stay Hungry! Stay Foolish!',
+  locales: {
+    '/': {
+      lang: 'en-US',
+      title: "Finen's Blog",
+      description: 'Stay Hungry! Stay Foolish!',
+    },
+  },
   head: [
     ['link', { rel: 'icon', href: `/logo.png` }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -26,11 +28,18 @@ module.exports = {
     indexName: 'FinenBlog'
   },
   plugins: [
-    ['@vuepress/back-to-top', true],
-    ['@vuepress/container', true],
-    ['@vuepress/nprogress', true],
-    ['@vuepress/active-header-links', true],
-    ['@vuepress/register-components', true],
+    ['@vuepress/active-header-links', {
+      sidebarLinkSelector: '.sidebar-link',
+      headerAnchorSelector: '.header-anchor'
+    }],
+    ['@vuepress/medium-zoom', {
+      selector: 'img.zoom-custom-imgs',
+      // medium-zoom options here
+      // See: https://github.com/francoischalifour/medium-zoom#options
+      options: {
+        margin: 16
+      }
+    }],
     ['@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: true
@@ -38,39 +47,86 @@ module.exports = {
     ['@vuepress/search', {
       searchMaxSuggestions: 10
     }],
+    ['@vuepress/back-to-top', true],
+    ['@vuepress/container', true],
+    ['@vuepress/nprogress', true],
+    ['@vuepress/register-components', true],
     ['@vuepress/google-analytics', {
       ga: 'UA-131334453-1'
-    }],
+    }]
   ],
+  // locales: {
+  // '/': {
+  //   lang: 'en-US',
+  //   title: "Finen's Blog",
+  //   description: 'Stay Hungry! Stay Foolish!',
+  // },
+  //   '/zh/': {
+  //     lang: 'zh-CN',
+  //     title: "Finen's Blog",
+  //     description: 'Stay Hungry! Stay Foolish!',
+  //   }
+  // },
+  theme: 'default',
   themeConfig: {
     repo: 'hirCodd',
     label: '简体中文',
     selectText: '选择语言',
     nav: require('./nav/index'),
-    sidebar: {
-      '/blog/git/': genGitSidebarConfig('git学习'),
+    homePage: 'HomeLayout', // Post or HomeLayout
+    valineConfig: {
+      appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
+      appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
+      notify: false,
+      verify: false,
+      avatar: 'mm',
+      placeholder: 'just go go...😁😁',
+      pageSize: 15,
+      visitor: true,
+      highlight: true,
+      recordIP: true
+    },
+    homeConfig: {
+      homeSrc: 'https://finen-1251602255.cos.ap-shanghai.myqcloud.com/blog/home/hero.png',
+      nickname: 'Finen',
+      signature: 'Stay Hungry, Stay Foolish!',
+      urllink1: 'https://github.com/hirCodd',
+      urllink1_text: 'Github',
+      urllink2: 'https://blog.csdn.net/HookJony',
+      urllink2_text: 'CSDN',
+      copyright: '2017-present Finen',
+      beian: '',
+      github_url: 'https://github.com/hirCodd',
+      github: 'hirCodd'
+    },
+    author: 'Finen',
+    locales: {
+      '/': {
 
-      // linux
-      '/blog/linux/': genLinuxSidebarConfig('Linux学习'),
-
-      // wheel
-      '/blog/wheel/': genWheelSidebarConfig('轮子'),
-
-      // other
-      '/blog/others/': genOthersSidebarConfig('其他'),
-
-      '/blog/frontend/': genFrontendConfig('前端开发'),
-
-      // record
-      '/blog/life-record/': genRecordSidebarConfig('生活随笔'),
-      
-      '/project/': genPorjectSidebarConfig('项目记录'),
-
-       // java栏目
-      '/blog/java/': genJavaArticle(),
-
-      // python栏目
-      '/blog/python/': genPythonArticle()
+        // sidebar: {
+        //   '/blog/others/git/': genGitSidebarConfig('git学习'),
+        //
+        //   // linux
+        //   '/blog/linux/': genLinuxSidebarConfig('Linux学习'),
+        //
+        //   // wheel
+        //   '/blog/others/wheel/': genWheelSidebarConfig('轮子'),
+        //
+        //   '/blog/frontend/': genFrontendConfig('前端开发'),
+        //
+        //   // record
+        //   '/blog/others/life-record/': genRecordSidebarConfig('生活随笔'),
+        //
+        //   // '/project/': genPorjectSidebarConfig('项目记录'),
+        //   '/blog/others/server/': genServerSidebarConfig('服务端'),
+        //
+        //   // java栏目
+        //   '/blog/java/': genJavaArticle(),
+        //
+        //   // python栏目
+        //   '/blog/python/': genPythonArticle()
+        // }
+      }
     }
   },
 }
@@ -116,6 +172,8 @@ function genWheelSidebarConfig(title){
       collapsable: false,
       children: [
         '',
+        'qduoj-development-record',
+        'vuepress'
       ]
     }
   ]
@@ -128,7 +186,7 @@ function genOthersSidebarConfig (title) {
       collapsable: false,
       children: [
         '',
-        'qduoj-development-record'
+
       ]
     }
   ]
@@ -141,6 +199,7 @@ function genRecordSidebarConfig (title) {
       collapsable: false,
       children: [
         '',
+        '2018',
         '2019'
       ]
     }
@@ -184,19 +243,19 @@ function genJavaArticle() {
     },
     {
       title: 'Spring',
-      children: [ 
-        
+      children: [
+
       ]
     },
     {
       title: 'SpringMVC',
-      children: [ 
-        
+      children: [
+
       ]
     },
     {
       title: 'SpringBoot',
-      children: [ 
+      children: [
         'springboot/spring-boot',
         'springboot/principle',
         'springboot/conf-file',
@@ -207,7 +266,7 @@ function genJavaArticle() {
     },
     {
       title: 'Mybatis',
-      children: [ 
+      children: [
         'mybatis/mybatis-param-process',
         'mybatis/mybatis-select',
         'mybatis/mybatis-dynamicSQL',
@@ -228,7 +287,7 @@ function genPythonArticle(){
     },
     {
       title: 'Python爬虫',
-      children: [ 
+      children: [
         'selenium-api-docs',
         'python-crawling-toutiao-picture'
       ]
@@ -241,5 +300,17 @@ function genPythonArticle(){
       title: 'Other',
       children: [ /* ... */ ]
     }]
-  
+}
+
+function genServerSidebarConfig(title) {
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+        'nginx'
+      ]
+    }
+  ]
 }

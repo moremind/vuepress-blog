@@ -4,7 +4,7 @@
 
 [中文文档](https://github.com/hirCodd/vuepress-blog/blob/master/README.md)|[English](https://github.com/hirCodd/vuepress-blog/blob/master/README_en.md)
 
-## vuepress版本为1.0.0-alpha.42
+## vuepress版本为1.3.1
 
 ## 快速开始
 ```bash

@@ -3,31 +3,58 @@
     <div class="cardpage" style="padding-bottom: 40px;">
       <el-card shadow="always" :body-style="{ padding: '0px' }" class="box-card">
         <img
-          src="https://finen-1251602255.cos.ap-shanghai.myqcloud.com/blog/home/hero.png"
+          :src="config.homeSrc"
           class="image"
         >
         <div class="nickname">
-          <span class="nick">Finen</span>
+          <span class="nick">{{config.nickname}}</span>
         </div>
         <div style="padding: 16px;" class="motto">
-          <span>Stay Hungry, Stay Foolish!</span>
+          <span>{{config.signature}}</span>
         </div>
+
+
         <el-row class="funct-button" style="padding: 20px;">
-          <el-button round @click="openPage('https://github.com/hirCodd')">Github</el-button>
-          <el-button round @click="openPage('https://blog.csdn.net/HookJony')">CSDN</el-button>
+          <router-link style="text-decoration: none" :to="{path:'post'}"><el-button class="start">Get Started →</el-button></router-link>
+<!--          <el-button round @click="openPage(config.urllink1)">{{config.urllink1_text}}</el-button>-->
+<!--          <el-button round @click="openPage(config.urllink2)">{{config.urllink2_text}}</el-button>-->
         </el-row>
       </el-card>
     </div>
 
-    <hr>
+    <!-- <hr style="width:740px;"> -->
     <div class="footer">
-      <p>Copyright © 2017-2019 Finen</p>
+      <p class="footer-list" style="color: #424242;">
+        <span v-if="$site.themeConfig.homeConfig.copyright">
+          <i class="fa fa-copyright" aria-hidden="true"></i>
+          <a class="copyright" style="color: #424242;">{{config.copyright}}</a>
+        </span>
+        <span v-if="$site.themeConfig.homeConfig.beian">
+          <i class="fa fa-shield" aria-hidden="true"></i>
+          <a class="filing" style="color: #424242;">{{config.beian}}</a>
+        </span>
+        <span>
+          <i class="fa fa-book" aria-hidden="true"></i>
+          <a class="theme" href="https://github.com/hirCodd/vuepress-theme-tassel" style="color: #424242;" target="_blank">主题 — vuepress-theme-tassel</a>
+        </span>
+        <span v-if="$site.themeConfig.homeConfig.github">
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <a class="github" style="color: #424242;" :href="config.github_url">{{config.github}}</a>
+        </span>
+      </p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'HomeLayout',
+  props: {
+    config: {
+      type: Object,
+      default: {}
+    }
+  },
   data() {
     return {};
   },
@@ -39,8 +66,27 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="stylus">
 @media (min-width: 1200px) {
+  .start {
+    display:inline-block;
+    font-size:1.2rem;
+    color:#fff;
+    background-color:#3eaf7c;
+    padding:.8rem 1.6rem;
+    border-radius:4px;
+    transition:background-color .1s ease;
+    box-sizing:border-box;
+    border-bottom:1px solid #389d70;
+  }
+  .start:hover{
+    background-color:#4abf8a;
+    color:#fff;
+    border-radius:4px;
+    box-sizing:border-box;
+    border-bottom:1px solid #389d70;
+  }
+
   .cardpage {
     display: flex;
     align-items: center;
@@ -84,9 +130,30 @@ export default {
     justify-content: center;
     text-align: center;
   }
+  .footer-list i {
+    margin-left: 1rem;
+  }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: $MQMobile) {
+  .start {
+    display:inline-block;
+    font-size:1.2rem;
+    color:#fff;
+    background-color:#3eaf7c;
+    padding:.8rem 1.6rem;
+    border-radius:4px;
+    transition:background-color .1s ease;
+    box-sizing:border-box;
+    border-bottom:1px solid #389d70;
+  }
+  .start:hover{
+    background-color:#4abf8a;
+    color:#fff;
+    border-radius:4px;
+    box-sizing:border-box;
+    border-bottom:1px solid #389d70;
+  }
   .box-card {
     width: 100%;
   }
@@ -129,6 +196,14 @@ export default {
     align-items: center;
     justify-content: center;
     text-align: center;
+    text-align: left!important
+  }
+  .footer span {
+    display: block
+    line-height 2rem
+  }
+  .footer-list i {
+    margin-left: .5rem;
   }
 }
 </style>
