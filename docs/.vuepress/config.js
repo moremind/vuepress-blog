@@ -1,9 +1,11 @@
+const path = require('path')
+
 module.exports = {
   dest: 'vuepress',
   locales: {
     '/': {
       lang: 'en-US',
-      title: "Finen's Blog",
+      title: "SimpleThinking's Blog",
       description: 'Stay Hungry! Stay Foolish!',
     },
   },
@@ -23,112 +25,149 @@ module.exports = {
   },
   evergreen: true,
   activeHeaderLinks: true,
-  algolia: {
-    apiKey: 'f417527242ae53d1f9d2913eb1ef07d4',
-    indexName: 'FinenBlog'
-  },
+  // algolia: {
+  //   apiKey: 'f417527242ae53d1f9d2913eb1ef07d4',
+  //   indexName: 'FinenBlog'
+  // },
   plugins: [
-    ['@vuepress/active-header-links', {
-      sidebarLinkSelector: '.sidebar-link',
-      headerAnchorSelector: '.header-anchor'
-    }],
-    ['@vuepress/medium-zoom', {
-      selector: 'img.zoom-custom-imgs',
-      // medium-zoom options here
-      // See: https://github.com/francoischalifour/medium-zoom#options
-      options: {
-        margin: 16
-      }
-    }],
-    ['@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: true
-    }],
-    ['@vuepress/search', {
-      searchMaxSuggestions: 10
-    }],
-    ['@vuepress/back-to-top', true],
-    ['@vuepress/container', true],
-    ['@vuepress/nprogress', true],
-    ['@vuepress/register-components', true],
-    ['@vuepress/google-analytics', {
-      ga: 'UA-131334453-1'
+    ['@vuepress/container', {
+      type: 'tip',
+      locales: {
+        '/': {
+          defaultInfo: 'TIP',
+        },
+        '/zh/': {
+          defaultInfo: '提示',
+        },
+      },
+    },{
+      type: 'warning',
+      locales: {
+        '/': {
+          defaultInfo: 'WARNING',
+        },
+        '/zh/': {
+          defaultInfo: '警告',
+        },
+      },
+    },{
+      type: 'danger',
+      locales: {
+        '/': {
+          defaultInfo: 'DANGER',
+        },
+        '/zh/': {
+          defaultInfo: '危险',
+        },
+      },
     }]
   ],
-  // locales: {
-  // '/': {
-  //   lang: 'en-US',
-  //   title: "Finen's Blog",
-  //   description: 'Stay Hungry! Stay Foolish!',
-  // },
-  //   '/zh/': {
-  //     lang: 'zh-CN',
-  //     title: "Finen's Blog",
-  //     description: 'Stay Hungry! Stay Foolish!',
-  //   }
-  // },
-  theme: 'default',
+
+  // plugins: [
+  //   ['@vuepress/active-header-links', {
+  //     sidebarLinkSelector: '.sidebar-link',
+  //     headerAnchorSelector: '.header-anchor'
+  //   }],
+  //   ['@vuepress/medium-zoom', {
+  //     selector: 'img.zoom-custom-imgs',
+  //     // medium-zoom options here
+  //     // See: https://github.com/francoischalifour/medium-zoom#options
+  //     options: {
+  //       margin: 16
+  //     }
+  //   }],
+  //   ['@vuepress/pwa', {
+  //     serviceWorker: true,
+  //     updatePopup: true
+  //   }],
+  //   ['@vuepress/search', {
+  //     searchMaxSuggestions: 10
+  //   }],
+  //   ['@vuepress/back-to-top', true],
+  //   ['@vuepress/container', true],
+  //   ['@vuepress/nprogress', true],
+  //   ['@vuepress/register-components', true],
+  //   ['@vuepress/google-analytics', {
+  //     ga: 'UA-131334453-1'
+  //   }]
+  // ],
+  theme: path.resolve(__dirname, './theme-tassel/lib/node/index'),
   themeConfig: {
-    repo: 'hirCodd',
+    repo: 'moremind',
     label: '简体中文',
     selectText: '选择语言',
-    nav: require('./nav/index'),
-    homePage: 'HomeLayout', // Post or HomeLayout
-    valineConfig: {
-      appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
-      appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
-      notify: false,
-      verify: false,
-      avatar: 'mm',
-      placeholder: 'just go go...😁😁',
-      pageSize: 15,
-      visitor: true,
-      highlight: true,
-      recordIP: true
-    },
-    homeConfig: {
-      homeSrc: 'https://finen-1251602255.cos.ap-shanghai.myqcloud.com/blog/home/hero.png',
-      nickname: 'Finen',
-      signature: 'Stay Hungry, Stay Foolish!',
-      urllink1: 'https://github.com/hirCodd',
-      urllink1_text: 'Github',
-      urllink2: 'https://blog.csdn.net/HookJony',
-      urllink2_text: 'CSDN',
-      copyright: '2017-present Finen',
-      beian: '',
-      github_url: 'https://github.com/hirCodd',
-      github: 'hirCodd'
-    },
-    author: 'Finen',
-    locales: {
-      '/': {
+    logo: null,
+    navbar: require('./nav/index'),
+    sidebar: [],
+    editLink: true,
+    editLinkText: 'Edit this page',
+    editLinkPattern: ':repo/blob/:branch/:path',
+    docsRepo: 'https://github.com/moremind/vuepress-blog',
+    docsBranch: 'master',
+    docsDir: 'docs',
+    lastUpdated: true,
+    lastUpdatedText: 'Last Updated',
+    contributorsText: 'Contributors',
+    backToHome: 'Back to home',
+    toggleDarkMode: 'toggle dark mode'
+    // navbar: require('./nav/index'),
+    // homePage: 'HomeLayout', // Post or HomeLayout
+    // valineConfig: {
+    //   appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
+    //   appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
+    //   notify: false,
+    //   verify: false,
+    //   avatar: 'mm',
+    //   placeholder: 'just go go...😁😁',
+    //   pageSize: 15,
+    //   visitor: true,
+    //   highlight: true,
+    //   recordIP: true
+    // },
+  //   homeConfig: {
+  //     homeSrc: 'https://finen-1251602255.cos.ap-shanghai.myqcloud.com/blog/home/hero.png',
+  //     nickname: 'Finen',
+  //     signature: 'Stay Hungry, Stay Foolish!',
+  //     urllink1: 'https://github.com/hirCodd',
+  //     urllink1_text: 'Github',
+  //     urllink2: 'https://blog.csdn.net/HookJony',
+  //     urllink2_text: 'CSDN',
+  //     copyright: '2017-present Finen',
+  //     beian: '',
+  //     github_url: 'https://github.com/hirCodd',
+  //     github: 'hirCodd'
+  //   },
+  //   author: 'Finen',
+  //   locales: {
+  //     '/': {
 
-        // sidebar: {
-        //   '/blog/others/git/': genGitSidebarConfig('git学习'),
-        //
-        //   // linux
-        //   '/blog/linux/': genLinuxSidebarConfig('Linux学习'),
-        //
-        //   // wheel
-        //   '/blog/others/wheel/': genWheelSidebarConfig('轮子'),
-        //
-        //   '/blog/frontend/': genFrontendConfig('前端开发'),
-        //
-        //   // record
-        //   '/blog/others/life-record/': genRecordSidebarConfig('生活随笔'),
-        //
-        //   // '/project/': genPorjectSidebarConfig('项目记录'),
-        //   '/blog/others/server/': genServerSidebarConfig('服务端'),
-        //
-        //   // java栏目
-        //   '/blog/java/': genJavaArticle(),
-        //
-        //   // python栏目
-        //   '/blog/python/': genPythonArticle()
-        // }
-      }
-    }
-  },
+  //       // sidebar: {
+  //       //   '/blog/others/git/': genGitSidebarConfig('git学习'),
+  //       //
+  //       //   // linux
+  //       //   '/blog/linux/': genLinuxSidebarConfig('Linux学习'),
+  //       //
+  //       //   // wheel
+  //       //   '/blog/others/wheel/': genWheelSidebarConfig('轮子'),
+  //       //
+  //       //   '/blog/frontend/': genFrontendConfig('前端开发'),
+  //       //
+  //       //   // record
+  //       //   '/blog/others/life-record/': genRecordSidebarConfig('生活随笔'),
+  //       //
+  //       //   // '/project/': genPorjectSidebarConfig('项目记录'),
+  //       //   '/blog/others/server/': genServerSidebarConfig('服务端'),
+  //       //
+  //       //   // java栏目
+  //       //   '/blog/java/': genJavaArticle(),
+  //       //
+  //       //   // python栏目
+  //       //   '/blog/python/': genPythonArticle()
+  //       // }
+  //     }
+  //   }
+  // },
+  }
 }
 
 function genGitSidebarConfig (title) {

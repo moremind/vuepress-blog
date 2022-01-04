@@ -1,23 +1,21 @@
 {
   "scripts": {
-    "dev": "yarn vuepress dev docs",
-    "build": "yarn vuepress build docs && cd vuepress && echo www.finen.top > CNAME "
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.3.1",
-    "@vuepress/plugin-google-analytics": "^1.3.1",
-    "@vuepress/plugin-active-header-links": "^1.3.1",
-    "@vuepress/plugin-medium-zoom": "^1.3.1",
-    "@vuepress/plugin-nprogress": "^1.3.1",
-    "@vuepress/plugin-pwa": "^1.3.1",
-    "@vuepress/plugin-search": "^1.3.1",
-    "vuepress": "^1.3.1",
-    "core-js": "2.6.7",
-    "docsearch.js": "^2.6.3",
-    "element-ui": "^2.13.0",
-    "leancloud-storage": "^4.3.1",
-    "valine": "^1.3.10"
+    "vuepress": "^2.0.0-beta.32"
   },
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.32",
+    "@vuepress/plugin-container": "^2.0.0-beta.32",
+    "@vuepress/plugin-git": "^2.0.0-beta.32",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.32",
+    "@vuepress/plugin-medium-zoom": "^2.0.0-beta.32",
+    "@vuepress/plugin-nprogress": "^2.0.0-beta.32",
+    "@vuepress/plugin-pwa": "^2.0.0-beta.32",
+    "@vuepress/plugin-pwa-popup": "^2.0.0-beta.32",
+    "@vuepress/plugin-search": "^2.0.0-beta.32",
+    "@vuepress/plugin-toc": "^2.0.0-beta.32"
   }
 }
