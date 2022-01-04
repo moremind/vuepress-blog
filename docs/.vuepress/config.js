@@ -109,21 +109,21 @@ module.exports = {
     lastUpdatedText: 'Last Updated',
     contributorsText: 'Contributors',
     backToHome: 'Back to home',
-    toggleDarkMode: 'toggle dark mode'
+    toggleDarkMode: 'toggle dark mode',
     // navbar: require('./nav/index'),
     // homePage: 'HomeLayout', // Post or HomeLayout
-    // valineConfig: {
-    //   appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
-    //   appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
-    //   notify: false,
-    //   verify: false,
-    //   avatar: 'mm',
-    //   placeholder: 'just go go...😁😁',
-    //   pageSize: 15,
-    //   visitor: true,
-    //   highlight: true,
-    //   recordIP: true
-    // },
+    valineConfig: {
+      appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
+      appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
+      notify: false,
+      verify: false,
+      avatar: 'mm',
+      placeholder: 'just go go...😁😁',
+      pageSize: 15,
+      visitor: true,
+      highlight: true,
+      recordIP: true
+    },
   //   homeConfig: {
   //     homeSrc: 'https://finen-1251602255.cos.ap-shanghai.myqcloud.com/blog/home/hero.png',
   //     nickname: 'Finen',

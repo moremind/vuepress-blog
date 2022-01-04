@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import PageMeta from './PageMeta.vue'
 import PageNav from './PageNav.vue'
+import Comments from "./global/Comments.vue";
 </script>
 
 <template>
@@ -16,5 +17,7 @@ import PageNav from './PageNav.vue'
     <PageNav />
 
     <slot name="bottom" />
+
+    <Comments v-bind:is="viewComments"/>
   </main>
 </template>
