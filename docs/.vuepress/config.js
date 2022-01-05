@@ -61,12 +61,12 @@ module.exports = {
         },
       },
     }],
-    // ["vupress-plugin-valine-comment", {
-    //   "COMMENT_OPTIONS": {
-    //     appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
-    //     appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
-    //   }
-    // }]
+    ["vupress-plugin-valine-comment", {
+      "COMMENT_OPTIONS": {
+        appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
+        appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
+      }
+    }]
   ],
 
   // plugins: [
