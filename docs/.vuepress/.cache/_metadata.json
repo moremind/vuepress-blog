@@ -1,30 +1,35 @@
 {
-  "hash": "872cf70d",
-  "browserHash": "16ef0f9d",
+  "hash": "1522a2d4",
+  "browserHash": "8497f579",
   "optimized": {
+    "@vuepress/core": {
+      "file": "D:/test/vuepress-blog/docs/.vuepress/.cache/@vuepress_core.js",
+      "src": "D:/test/vuepress-blog/node_modules/@vuepress/core/lib/index.js",
+      "needsInterop": true
+    },
     "vue": {
-      "file": "E:/MyBlog/vuepress-blog/docs/.vuepress/.cache/vue.js",
-      "src": "E:/MyBlog/vuepress-blog/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
+      "file": "D:/test/vuepress-blog/docs/.vuepress/.cache/vue.js",
+      "src": "D:/test/vuepress-blog/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
       "needsInterop": false
     },
     "vue-router": {
-      "file": "E:/MyBlog/vuepress-blog/docs/.vuepress/.cache/vue-router.js",
-      "src": "E:/MyBlog/vuepress-blog/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "file": "D:/test/vuepress-blog/docs/.vuepress/.cache/vue-router.js",
+      "src": "D:/test/vuepress-blog/node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "needsInterop": false
     },
     "@vueuse/core": {
-      "file": "E:/MyBlog/vuepress-blog/docs/.vuepress/.cache/@vueuse_core.js",
-      "src": "E:/MyBlog/vuepress-blog/node_modules/@vueuse/core/index.mjs",
+      "file": "D:/test/vuepress-blog/docs/.vuepress/.cache/@vueuse_core.js",
+      "src": "D:/test/vuepress-blog/node_modules/@vueuse/core/index.mjs",
       "needsInterop": false
     },
     "nprogress": {
-      "file": "E:/MyBlog/vuepress-blog/docs/.vuepress/.cache/nprogress.js",
-      "src": "E:/MyBlog/vuepress-blog/node_modules/nprogress/nprogress.js",
+      "file": "D:/test/vuepress-blog/docs/.vuepress/.cache/nprogress.js",
+      "src": "D:/test/vuepress-blog/node_modules/nprogress/nprogress.js",
       "needsInterop": true
     },
     "@vuepress/shared": {
-      "file": "E:/MyBlog/vuepress-blog/docs/.vuepress/.cache/@vuepress_shared.js",
-      "src": "E:/MyBlog/vuepress-blog/node_modules/@vuepress/shared/lib/esm/index.js",
+      "file": "D:/test/vuepress-blog/docs/.vuepress/.cache/@vuepress_shared.js",
+      "src": "D:/test/vuepress-blog/node_modules/@vuepress/shared/lib/esm/index.js",
       "needsInterop": false
     }
   }

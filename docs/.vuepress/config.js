@@ -91,7 +91,7 @@ module.exports = {
   //     ga: 'UA-131334453-1'
   //   }]
   // ],
-  theme: path.resolve(__dirname, './theme-tassel/lib/node/index'),
+  theme: path.resolve(__dirname, './theme-tassel2/lib/node/index'),
   themeConfig: {
     repo: 'moremind',
     label: '简体中文',
@@ -99,14 +99,15 @@ module.exports = {
     logo: null,
     navbar: require('./nav/index'),
     sidebar: [],
-    editLink: true,
+    editLink: false,
     editLinkText: 'Edit this page',
     editLinkPattern: ':repo/blob/:branch/:path',
     docsRepo: 'https://github.com/moremind/vuepress-blog',
     docsBranch: 'master',
     docsDir: 'docs',
-    lastUpdated: true,
+    lastUpdated: false,
     lastUpdatedText: 'Last Updated',
+    contributors: false,
     contributorsText: 'Contributors',
     backToHome: 'Back to home',
     toggleDarkMode: 'toggle dark mode',
