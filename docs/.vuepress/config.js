@@ -60,7 +60,13 @@ module.exports = {
           defaultInfo: '危险',
         },
       },
-    }]
+    }],
+    // ["vupress-plugin-valine-comment", {
+    //   "COMMENT_OPTIONS": {
+    //     appId: 'piM1Wm7mzq4fsj7RfCCJ7slE-gzGzoHsz',
+    //     appKey: 'vdSq43byXijVSfd0Y5qY0vf8',
+    //   }
+    // }]
   ],
 
   // plugins: [
@@ -91,7 +97,8 @@ module.exports = {
   //     ga: 'UA-131334453-1'
   //   }]
   // ],
-  theme: path.resolve(__dirname, './theme-tassel2/lib/node/index'),
+  theme: path.resolve(__dirname, '../../packages/vuepress-theme-tassel/lib/node/index'),
+  // theme: path.resolve(__dirname, './packages/theme-tassel2/lib/node/index'),
   themeConfig: {
     repo: 'moremind',
     label: '简体中文',

@@ -1,0 +1,15 @@
+{
+  "name": "vuepress-theme-tassel",
+  "version": "1.0.0",
+  "main": "lib/node/index.js",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "valine": "^1.4.16"
+  },
+  "dependencies": {
+    "vupress-plugin-valine-comment": "../vupress-plugin-valine-comment"
+  }
+}

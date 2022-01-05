@@ -3190,6 +3190,11 @@ type-fest@^0.16.0:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.16.0.tgz#3240b891a78b0deae910dbeb86553e552a148860"
   integrity sha512-eaBzG6MxNzEn9kiwvtre90cXaNLkmadMWa1zQMs3XORCXNbsH/OewwbxC5ia9dCxIxnTAsSxXJaa/p5y8DlvJg==
 
+typescript@^4.5.2:
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
+  integrity sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==
+
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.6.tgz#9c411a802a409a91fc6cf74081baba34b24499ac"
@@ -3313,6 +3318,9 @@ vuepress@^2.0.0-beta.32:
   integrity sha512-d0M0FgDcHE6junWEgMIrgvOvtmKYNfswDzqnAm6bwAjpi6kWQ5ojfIsB2/z9wsm8kgMk9Bdg3HsmleiwKwZTuQ==
   dependencies:
     vuepress-vite "2.0.0-beta.32"
+
+vupress-plugin-valine-comment@docs/.vuepress/packages/vupress-plugin-valine-comment:
+  version "1.0.0"
 
 wcwidth@^1.0.1:
   version "1.0.1"
