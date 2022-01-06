@@ -9,7 +9,6 @@ export * from '../shared';
 
 export const valineComment: Plugin<ValineOptions> = (options, app) => {
 
-    // @ts-ignore
     const valeneOptions: ValineOptions;
 
     const config: PluginObject = {

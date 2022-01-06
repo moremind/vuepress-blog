@@ -18,6 +18,6 @@
     "@vuepress/plugin-pwa-popup": "^2.0.0-beta.32",
     "@vuepress/plugin-search": "^2.0.0-beta.32",
     "@vuepress/plugin-toc": "^2.0.0-beta.32",
-    "vupress-plugin-valine-comment": "docs/.vuepress/packages/vupress-plugin-valine-comment"
+    "vupress-plugin-valine-comment": "./packages/vupress-plugin-valine-comment"
   }
 }

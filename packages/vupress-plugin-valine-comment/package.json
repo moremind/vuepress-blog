@@ -13,7 +13,10 @@
     "copy": "cpx \"src/**/*.{css,svg}\" lib"
   },
   "dependencies": {
-
+    "@vuepress/core": "2.0.0-beta.32",
+    "@vuepress/utils": "2.0.0-beta.32",
+    "ts-debounce": "^4.0.0",
+    "vue": "^3.2.24"
   },
   "devDependencies": {
     "valine": "^1.4.16"
