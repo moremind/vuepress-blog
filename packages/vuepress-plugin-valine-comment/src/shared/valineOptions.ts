@@ -1,16 +1,5 @@
 export interface ValineOptions {
 
-    // appId: valineConfig.appId,
-    // appKey: valineConfig.appKey,
-    // notify: valineConfig.notify,
-    // verify: valineConfig.verify,
-    // avatar: valineConfig.avatar,
-    // placeholder: valineConfig.placeholder,
-    // pageSize: valineConfig.pageSize,
-    // visitor: valineConfig.visitor,
-    // highlight: valineConfig.highlight,
-    // recordIP: valineConfig.recordIP,
-    // path: window.location.pathname
     /**
      * leancloud appId
      */

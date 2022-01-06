@@ -6,25 +6,20 @@ import type { Plugin, PluginObject } from "@vuepress/core";
 
 
 export * from '../shared';
+console.log("load---")
+export const valineCommentPlugin: Plugin<ValineOptions> = (options, app) => ({
 
-export const valineComment: Plugin<ValineOptions> = (options, app) => {
+    name: "vuepress-plugin-valine-comment"
 
-    const valeneOptions: ValineOptions;
+    // const valeneOptions: ValineOptions = (options as ValineOptions)
+    //
+    // const config: PluginObject = {
+    //     name: "vuepress-plugin-valine-comment"
+    // };
+    //
+    // return config;
 
-    const config: PluginObject = {
-        name: "vupress-plugin-valine-comment",
-
-        define: () => ({
-            COMMENT_OPTIONS: {
-                ...valeneOptions,
-            },
-        }),
-        clientAppEnhanceFiles: path.resolve(__dirname, "../client/appEnhance.js"),
-    };
-
-    return config;
-
-};
+});
 
 
 

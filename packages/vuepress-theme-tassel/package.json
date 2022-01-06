@@ -10,6 +10,6 @@
     "valine": "^1.4.16"
   },
   "dependencies": {
-    "vupress-plugin-valine-comment": "../vupress-plugin-valine-comment"
+    "vuepress-plugin-valine-comment": "1.0.0"
   }
 }

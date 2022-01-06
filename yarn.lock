@@ -1013,9 +1013,9 @@
   integrity sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==
 
 "@types/node@*":
-  version "17.0.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.7.tgz#4a53d8332bb65a45470a2f9e2611f1ced637a5cb"
-  integrity sha512-1QUk+WAUD4t8iR+Oj+UgI8oJa6yyxaB8a8pHaC8uqM6RrS1qbL7bf3Pwl5rHv0psm2CuDErgho6v5N+G+5fwtQ==
+  version "17.0.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.8.tgz#50d680c8a8a78fe30abe6906453b21ad8ab0ad7b"
+  integrity sha512-YofkM6fGv4gDJq78g4j0mMuGMkZVxZDgtU0JRdx6FgiJDG+0fY0GKVolOV8WqVmEhLCXkQRjwDdKyPxJp/uucg==
 
 "@types/resolve@1.17.1":
   version "1.17.1"
@@ -1409,17 +1409,17 @@
     upath "^2.0.1"
 
 "@vueuse/core@^7.1.2":
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-7.5.1.tgz#3038a0ca6e16f6885d2457778260712180422526"
-  integrity sha512-GczfdTWqH483zkUHdDYiLm0Tn51OtsQXYc+eBKKIeolh0mgn682KbSYmkrjNytaF7qGc74YxMDAYjkPBW6V2Pg==
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-7.5.3.tgz#7e8ea430a293670f12e5052a5285cb4ef8e9c758"
+  integrity sha512-D9j5ymHFMFRXQqCp0yZJkf/bvBGiz0MrKUa364p+L8dMyd5zyq2K1JmHyvoBd4xbTFRfmQ1h878u6YE5LCkDVQ==
   dependencies:
-    "@vueuse/shared" "7.5.1"
+    "@vueuse/shared" "7.5.3"
     vue-demi "*"
 
-"@vueuse/shared@7.5.1":
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-7.5.1.tgz#d88a8d8a4799c30e7dd4f965808e78b3793c3da6"
-  integrity sha512-zMQEuYJyTmr5Hj2rYgSbb4H/cSI8mdaa9dUuw20j6rPV+xLV11y7vCyIkxo31uODDr0p77FMlProKzNDiK9rAA==
+"@vueuse/shared@7.5.3":
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-7.5.3.tgz#2a844f38e45b1002e14d8f0ab5b41221c4fb9b09"
+  integrity sha512-BJ71cxHN5VByW1S58Gl85NFJaQu93F7Vs7K/MuAKsIIuHm9PBbkR5Vxkg9ko9cBdiKVt+FNoo13BhdbA+Vwycg==
   dependencies:
     vue-demi "*"
 
@@ -1799,9 +1799,9 @@ ejs@^3.1.6:
     jake "^10.6.1"
 
 electron-to-chromium@^1.4.17:
-  version "1.4.33"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.33.tgz#1fe18961becb51c7db8ec739c655ef1b93d9349e"
-  integrity sha512-OVK1Ad3pHnmuXPhEfq85X8vUKr1UPNHryBnbKnyLcAfh8dPwoFjoDhDlP5KpPJIiymvSucZs48UBrE1250IxOw==
+  version "1.4.36"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.36.tgz#446c6184dbe5baeb5eae9a875490831e4bc5319a"
+  integrity sha512-MbLlbF39vKrXWlFEFpCgDHwdlz4O3LmHM5W4tiLRHjSmEUXjJjz8sZkMgWgvYxlZw3N1iDTmCEtOkkESb5TMCg==
 
 entities@~2.1.0:
   version "2.1.0"
@@ -2158,9 +2158,9 @@ globby@^11.0.4:
     slash "^3.0.0"
 
 graceful-fs@^4.1.6, graceful-fs@^4.2.0:
-  version "4.2.8"
-  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
-  integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
+  version "4.2.9"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
+  integrity sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==
 
 gray-matter@^4.0.3:
   version "4.0.3"
@@ -2286,9 +2286,9 @@ is-callable@^1.1.4, is-callable@^1.2.4:
   integrity sha512-nsuwtxZfMX67Oryl9LCQ+upnC0Z0BgpwntpS89m1H/TLF0zNfzfLMV/9Wa/6MZsj0acpEjAO0KF1xT6ZdLl95w==
 
 is-core-module@^2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.8.0.tgz#0321336c3d0925e497fd97f5d95cb114a5ccd548"
-  integrity sha512-vd15qHsaqrRL7dtH6QNuy0ndJmRDrS9HAM1CAiSifNUFv4x1a0CCVsj18hJ1mShxIG6T2i1sO78MkP56r0nYRw==
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.8.1.tgz#f59fdfca701d5879d0a6b100a40aa1560ce27211"
+  integrity sha512-SdNCUs284hr40hFTFP6l0IfZ/RSrMXF3qgoRHd3/79unUTvrFO/JoXwkGm+5J/Oe3E/b5GsnG330uUNgRpu1PA==
   dependencies:
     has "^1.0.3"
 
@@ -2891,17 +2891,10 @@ rollup-plugin-terser@^7.0.0:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup@^2.43.1:
+rollup@^2.43.1, rollup@^2.59.0, rollup@^2.60.2:
   version "2.63.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.63.0.tgz#fe2f7fec2133f3fab9e022b9ac245628d817c6bb"
   integrity sha512-nps0idjmD+NXl6OREfyYXMn/dar3WGcyKn+KBzPdaLecub3x/LrId0wUcthcr8oZUAcZAR8NKcfGGFlNgGL1kQ==
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-rollup@^2.59.0, rollup@^2.60.2:
-  version "2.62.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.62.0.tgz#9e640b419fc5b9e0241844f6d55258bd79986ecc"
-  integrity sha512-cJEQq2gwB0GWMD3rYImefQTSjrPYaC6s4J9pYqnstVLJ1CHa/aZNVkD4Epuvg4iLeMA4KRiq7UM7awKK6j7jcw==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -2931,9 +2924,9 @@ sass-loader@^12.4.0:
     neo-async "^2.6.2"
 
 sass@^1.44.0:
-  version "1.45.2"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.45.2.tgz#130b428c1692201cfa181139835d6fc378a33323"
-  integrity sha512-cKfs+F9AMPAFlbbTXNsbGvg3y58nV0mXA3E94jqaySKcC8Kq3/8983zVKQ0TLMUrHw7hF9Tnd3Bz9z5Xgtrl9g==
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.46.0.tgz#923117049525236026a7ede69715580eb0fac751"
+  integrity sha512-Z4BYTgioAOlMmo4LU3Ky2txR8KR0GRPLXxO38kklaYxgo7qMTgy+mpNN4eKsrXDTFlwS5vdruvazG4cihxHRVQ==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -3302,6 +3295,14 @@ vue@^3.2.24:
     "@vue/server-renderer" "3.2.26"
     "@vue/shared" "3.2.26"
 
+"vuepress-plugin-valine-comment@file:packages/vuepress-plugin-valine-comment":
+  version "1.0.0"
+  dependencies:
+    "@vuepress/core" "2.0.0-beta.32"
+    "@vuepress/utils" "2.0.0-beta.32"
+    ts-debounce "^4.0.0"
+    vue "^3.2.24"
+
 vuepress-vite@2.0.0-beta.32:
   version "2.0.0-beta.32"
   resolved "https://registry.yarnpkg.com/vuepress-vite/-/vuepress-vite-2.0.0-beta.32.tgz#2db9ba918c159988bec0f832b960d73f9b47c033"
@@ -3318,9 +3319,6 @@ vuepress@^2.0.0-beta.32:
   integrity sha512-d0M0FgDcHE6junWEgMIrgvOvtmKYNfswDzqnAm6bwAjpi6kWQ5ojfIsB2/z9wsm8kgMk9Bdg3HsmleiwKwZTuQ==
   dependencies:
     vuepress-vite "2.0.0-beta.32"
-
-vupress-plugin-valine-comment@./packages/vupress-plugin-valine-comment:
-  version "1.0.0"
 
 wcwidth@^1.0.1:
   version "1.0.1"

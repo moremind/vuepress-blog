@@ -1,8 +1,8 @@
 {
-  "name": "vupress-plugin-valine-comment",
+  "name": "vuepress-plugin-valine-comment",
   "version": "1.0.0",
-  "main": "src/node/index.js",
-  "types": "src/node/index.d.ts",
+  "main": "lib/node/index.js",
+  "types": "lib/node/index.d.ts",
   "license": "MIT",
   "files": [
     "lib"

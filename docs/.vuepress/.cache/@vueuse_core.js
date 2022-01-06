@@ -1498,14 +1498,14 @@ function useAsyncQueue(tasks, options = {}) {
     result
   };
 }
-function useAsyncState(promise, initialState2, options = {}) {
+function useAsyncState(promise, initialState2, options) {
   const {
     immediate = true,
     delay = 0,
     onError = noop,
     resetOnExecute = true,
     shallow = true
-  } = options;
+  } = options != null ? options : {};
   const state = shallow ? shallowRef(initialState2) : ref(initialState2);
   const isReady = ref(false);
   const isLoading = ref(false);
@@ -1933,10 +1933,7 @@ var StorageSerializers = {
     write: (v) => JSON.stringify(Array.from(v.entries()))
   }
 };
-function useStorage(key, initialValue, storage = getSSRHandler("getDefaultStorage", () => {
-  var _a2;
-  return (_a2 = defaultWindow) == null ? void 0 : _a2.localStorage;
-})(), options = {}) {
+function useStorage(key, initialValue, storage, options = {}) {
   var _a2;
   const {
     flush = "pre",
@@ -1954,6 +1951,16 @@ function useStorage(key, initialValue, storage = getSSRHandler("getDefaultStorag
   const type = guessSerializerType(rawInit);
   const data = (shallow ? shallowRef : ref)(initialValue);
   const serializer = (_a2 = options.serializer) != null ? _a2 : StorageSerializers[type];
+  if (!storage) {
+    try {
+      storage = getSSRHandler("getDefaultStorage", () => {
+        var _a22;
+        return (_a22 = defaultWindow) == null ? void 0 : _a22.localStorage;
+      })();
+    } catch (e) {
+      onError(e);
+    }
+  }
   function read(event) {
     if (!storage || event && event.key !== key)
       return;
@@ -2017,10 +2024,7 @@ function useColorMode(options = {}) {
     selector = "html",
     attribute = "class",
     window: window2 = defaultWindow,
-    storage = getSSRHandler("getDefaultStorage", () => {
-      var _a2;
-      return (_a2 = defaultWindow) == null ? void 0 : _a2.localStorage;
-    })(),
+    storage,
     storageKey = "vueuse-color-scheme",
     listenToStorageChanges = true,
     storageRef
@@ -4924,10 +4928,7 @@ function useSpeechSynthesis(text, options = {}) {
     speak
   };
 }
-function useStorageAsync(key, initialValue, storage = getSSRHandler("getDefaultStorageAsync", () => {
-  var _a2;
-  return (_a2 = defaultWindow) == null ? void 0 : _a2.localStorage;
-})(), options = {}) {
+function useStorageAsync(key, initialValue, storage, options = {}) {
   var _a2;
   const {
     flush = "pre",
@@ -4945,6 +4946,16 @@ function useStorageAsync(key, initialValue, storage = getSSRHandler("getDefaultS
   const type = guessSerializerType(rawInit);
   const data = (shallow ? shallowRef : ref)(initialValue);
   const serializer = (_a2 = options.serializer) != null ? _a2 : StorageSerializers[type];
+  if (!storage) {
+    try {
+      storage = getSSRHandler("getDefaultStorage", () => {
+        var _a22;
+        return (_a22 = defaultWindow) == null ? void 0 : _a22.localStorage;
+      })();
+    } catch (e) {
+      onError(e);
+    }
+  }
   async function read(event) {
     if (!storage || event && event.key !== key)
       return;
