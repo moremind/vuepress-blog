@@ -19,6 +19,6 @@
     "vue": "^3.2.24"
   },
   "devDependencies": {
-    "valine": "^1.4.16"
+    "valine": "^1.5.0"
   }
 }
